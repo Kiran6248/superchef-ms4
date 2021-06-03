@@ -31,6 +31,8 @@ This project is plugged into a **PostgreSQL** database, with **SQlite3** used in
         * [Sitemap](#sitemap)
     * [Surface](#surface)
         * [Color](#color)
+        * [Core](#core)
+        * [Buttons](#buttons)
         * [Typography](#typography)
         * [Images](#images)
 
