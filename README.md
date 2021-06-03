@@ -201,5 +201,28 @@ The wireframes for this Project can be seen here.
 
 13. [Product Management Page](docs/wireframes/ProductManagementPage.pdf)
 
+#### **Sitemap**
+Sitemap is prepared for this site to understand the navigation of the pages.
 
+Sitemap can be seen here. [Sitemap](docs/wireframes/Sitemap.pdf)
+
+### **Surface**
+#### **Color**
+
+#### **Core**
+
+#### **Buttons**
+
+#### **Typography**
+
+[Montserrat](https://fonts.google.com/specimen/Montserrat?query=mon)
+
+Google font **Montserrat** with a fallback of **sans serif** is selected for the entire project.
+
+#### **Images**
+
+Images used are taken from [Unsplash](https://unsplash.com/) and [Google](https://www.google.com). 
+
+[Go back to Top](#table-of-content)
+***
 
