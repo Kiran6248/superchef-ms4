@@ -141,3 +141,65 @@ As the Site owner I want/expect/need:
 
 [Go back to Top](#table-of-content)
   ***
+
+## **Planes of Development**
+### **Strategy**
+
+The aim of making this site is to make a website that focuses mainly on kitchen products. 
+There are plenty of sites right now but very few focuses only in kitchen tools and accessories. We are going through a pandemic and lockdown situation worldwide. We are bound to stay inside our home and left with very few activities, in that cooking is a good hobby to pursue.
+ As we know new cooks are very keen to try new utensils and accessories, so this site might be a good place for them to search the product of their choice.
+
+ ### **Scope**
+
+ I want to make a website that is accessible to everyone. People can search and browse all the products without being registered, 
+ so that their will be no hesitation in going through the site. Anyone can do the purchasing by adding his/her details and doing valid payment. 
+ 
+ The detail of every product opens in new page with product rating with it, so it is easier to decide which product to buy. 
+ 
+ Products can be sorted in various ways like price- low to high or high to low, category, ratings etc. users can make their profile, so that when they return back, they will have their details already filled.
+Users can go through the blog page and write a comment if they want. And they can contact the site owner with the contact form provided.
+
+### **Structure**
+
+This website will be a multi-page site, where pages are connected through Navigation Bar or Python. 
+The navigation bar will have links for the Home page, my account(login, register), bag, and Blog. The navigation links will change and show the logout and My profile Once the user is logged in. 
+It will show product management link for the superuser.The navigation bar will be collapsible for Mobile view . 
+There will be a footer, which will show the contact details of the admin. It will be sticky and always remain at the end of the page. 2 forms will be there, one for Login and the other for Registration. 
+One contact form will also be there for the users to contact the admin. There will be pages for products, product details, shopping bag, checkout, checkout success, blog, blog details, Users will have a my profile page after the register with the site. Superuser will do the product management, he/she can add edit and delete any product. Superuser will post the blog which can be commented by any user .
+SQLite3 is used in development and PostgreSQL database is used in production mode. All the static and media file will be stored in AWS s3 bucket it will be deployed by using Heroku.
+
+### **Skeleton**
+#### **Wireframe**
+The wireframe for this project has been made for Three screen sizes(Mobile View, Tablet View, and Laptop View). Each page is shown in all three 
+screen sizes for a better understanding of the responsiveness of the page.
+
+The wireframes for this Project can be seen here.
+
+1. [Home Page](docs/wireframes/HomePage.pdf)
+
+2. [Products Page](docs/wireframes/ProductsPage.pdf)
+
+3. [Product Details Page](docs/wireframes/ProductDetailsPage.pdf)
+
+4. [Category Page](docs/wireframes/CategoryPage.pdf)
+
+5. [My Profile Page](docs/wireframes/MyProfilePage.pdf)
+
+6. [Login Page](docs/wireframes/LoginPage.pdf)
+
+7. [Register Page](docs/wireframes/RegisterPage.pdf)
+
+8. [Bag Page](docs/wireframes/BagPage.pdf)
+
+9. [Checkout Page](docs/wireframes/CheckoutPage.pdf)
+
+10. [Contact page](docs/wireframes/ContactPage.pdf)
+
+11. [Blog Page](docs/wireframes/BlogPage.pdf)
+
+12. [Blog Details Page](docs/wireframes/BlogDetailsPage.pdf)
+
+13. [Product Management Page](docs/wireframes/ProductManagementPage.pdf)
+
+
+
