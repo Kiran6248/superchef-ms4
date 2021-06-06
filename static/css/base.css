@@ -52,7 +52,6 @@ body {
 /*----------------------------------------Carousel */
 .carousel-item {
     position: relative;
-    height: 650px;
 }
 
 .carousel-inner {
@@ -61,12 +60,12 @@ body {
 }
 
 .cover-text{
-    top: -250px;
+    top: -200px;
     font-size:130%;
     width: 300px;
     height: 100px;
     background-color: rgba(225, 173, 1, 0.9);
-    position: relative;
+    position: absolute;
     color: #000;
 }
 
@@ -78,6 +77,12 @@ body {
 
 #delivery-banner h5 {
     letter-spacing: 1px;
+}
+
+/*---------------------------------- Action card */
+.custom-card-img {
+    height: 275px;
+    opacity: 0.6;
 }
 
 /*---------------------------------------- media Queries */
@@ -102,4 +107,36 @@ body {
     .header-container {
         padding-top: 164px;
     }
+
+}
+
+/*------------- smaller screen*/
+@media (max-width: 991px) {
+    .carousel-item > img {
+        object-fit: cover;
+        height: calc(100vh - 380px);
+        width: 100%;
+        justify-items: center;
+        margin: 0;
+    }
+
+    .cover-text {
+        top: -120px;
+        font-size: 120%;
+        width: 240px;
+        height: 130px;
+        padding-top: 20px;
+        position: absolute;
+    }
+
+    .cover-text h4 {
+        font-size: 100%;
+    }
+
+    .cover-text a {
+        width: 220px;
+        height: 40px;
+        font-size: 90%;
+    }
+
 }
