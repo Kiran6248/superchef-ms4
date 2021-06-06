@@ -18,6 +18,11 @@ body {
     border: 1px solid black !important;
 }
 
+.uppercase {
+    text-transform: uppercase;
+}
+
+
 /*-------------------------------------From Bulma */
 
 /* centeredt and consistent size for fontawesome */
@@ -56,13 +61,23 @@ body {
 }
 
 .cover-text{
-    top: -200px;
+    top: -250px;
     font-size:130%;
     width: 300px;
     height: 100px;
     background-color: rgba(225, 173, 1, 0.9);
     position: relative;
     color: #000;
+}
+
+/*--------------------------------------Nav Bar */
+
+.delivery-banner-bg {
+    background-color: #E1AD01;
+}
+
+#delivery-banner h5 {
+    letter-spacing: 1px;
 }
 
 /*---------------------------------------- media Queries */
