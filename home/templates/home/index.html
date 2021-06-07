@@ -17,7 +17,7 @@
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="d-block w-100" src="{% static 'background1-copy.jpg' %}" alt="Product image">
+                            <img class="d-block w-100" src="{{ MEDIA_URL}}background1.jpg" alt="Product image">
                             <div class="carousel-caption">
                                 <div class="row">
                                     <div class="col-12 col-md-3">
@@ -30,7 +30,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="{% static 'background2-copy.jpg' %}" alt="product image2">
+                            <img class="d-block w-100" src="{{ MEDIA_URL}}background2.jpg" alt="product image2">
                             <div class="carousel-caption">
                                 <div class="row">
                                     <div class="col-12 col-md-3">
@@ -42,7 +42,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="{% static 'background3-copy.jpg' %}" alt="product image3">
+                            <img class="d-block w-100" src="{{ MEDIA_URL}}background3.jpg" alt="product image3">
                             <div class="carousel-caption">
                                 <div class="row">
                                     <div class="col-12 col-md-3">
@@ -75,7 +75,7 @@
                 <div class="col-12 col-md-6 cards">
                     <!-- Blog Card-->
                     <div class="card bg-dark text-white text-center">
-                        <img src="" class="card-img custom-card-img" alt="Blog Card Image">
+                        <img src="{{ MEDIA_URL}}blog.jpg" class="card-img custom-card-img" alt="Blog Card Image">
                         <div class="card-img-overlay text-center d-flex">
                             <div class="align-self-center mx-auto">
                                 <!--Button to blog-->
@@ -88,7 +88,7 @@
                 <div class="col-12 col-md-6 cards">
                     <!-- Special offer card-->
                     <div class="card bg-dark text-white">
-                        <img src="" class="card-img custom-card-img" alt="Special offer card">
+                        <img src="{{ MEDIA_URL}}background.jpg" class="card-img custom-card-img" alt="Special offer card">
                         <div class="card-img-overlay text-center d-flex">
                             <div class="align-self-center" mx-auto>
                                 <h5 class="card-title">Take a look at our special offers</h5>
