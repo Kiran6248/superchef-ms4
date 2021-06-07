@@ -49,7 +49,9 @@ This project is plugged into a **PostgreSQL** database, with **SQlite3** used in
     * [Project Management](#project-management)
     * [Tools](#tools)
 
-* [Resources](#resources)
+* [Bugs](#bugs)
+    * [Project barriers and solutions](#project-barriers-and-solutions)
+    * [Known Issues](#known-issues)
 
 * [Testing](#testing)
 
@@ -227,4 +229,48 @@ Images used are taken from [Unsplash](https://unsplash.com/) and [Google](https:
 
 [Go back to Top](#table-of-content)
 ***
+
+## **Database Model**
+
+[Go back to Top](#table-of-content)
+***
+
+## **Features**
+
+[Go back to Top](#table-of-content)
+***
+
+## **Technologies used**
+
+[Go back to Top](#table-of-content)
+***
+
+## **Bugs**
+
+### **Project barriers and solutions**
+
+* While making the index.html page for Home app, I tried to show background images by adding them in media folder, but it was not working. It was working fine when i tried to add the images from static folder. I checked every spelling error in settings.py and project level urls.py file, but I could not find any mistake. I searched in [Django documentation](https://docs.djangoproject.com/en/3.2/) also to check if the code is correct. I found that the code is correct. So, I searched in slack for some related issues and I found one suggestion from a member to add one code in settings.py's context_processor. I tried that code and images started loading perfectly. the code used was 
+        
+        'django.template.context_processors.media',
+
+### **Known Issues**
+
+[Go back to Top](#table-of-content)
+***
+
+## **Testing**
+
+[Go back to Top](#table-of-content)
+***
+
+## **Deployment**
+
+[Go back to Top](#table-of-content)
+***
+
+## **Credits**
+
+[Go back to Top](#table-of-content)
+***
+
 

@@ -18,9 +18,7 @@ body {
     border: 1px solid black !important;
 }
 
-.uppercase {
-    text-transform: uppercase;
-}
+
 
 
 /*-------------------------------------From Bulma */
@@ -78,6 +76,7 @@ body {
 #delivery-banner h5 {
     letter-spacing: 1px;
 }
+
 
 /*---------------------------------- Action card */
 .home-body-section {
