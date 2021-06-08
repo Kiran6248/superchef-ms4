@@ -58,13 +58,14 @@ body {
 }
 
 .cover-text{
-    top: -200px;
+    top: -350px;
     font-size:130%;
     width: 300px;
     height: 150px;
-    background-color: rgba(225, 173, 1, 0.9);
+    background-color: rgba(225, 173, 1, 0.8);
     position: absolute;
     color: #000;
+    
 }
 
 .cover-text h4 {
