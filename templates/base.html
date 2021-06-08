@@ -61,7 +61,7 @@
                 <!--Logo-->
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                        <h2 class="logo-font text-black my-0"><i class="fas fa-star"></i><strong>SuperChef</strong></h2>
+                        <h2 class="logo-font text-black my-0"><i class="fas fa-star"></i> SuperChef</h2>
                     </a>
                 </div>
                 <!--icons-->
@@ -70,15 +70,17 @@
                         <!-- My Account-->
                         <li class="list-inline-item dropdown">
                             <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <div class="text-center">
+                                <div class="text-center top-nav-icon">
                                     <div><i class="fas fa-user fa-lg"></i></div>
                                     <p class="my-0">My Account</p>
                                 </div>
                             </a>
-                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                            <!-- My account dropdown-->
+                            <div class="dropdown-menu border-0 my-account-dropdown" aria-labelledby="user-options">
                                 {% if request.user.is_authenticated %}
                                     {% if request.user.is_superuser %}
                                         <a href="" class="dropdown-item">Product Management</a>
+                                        <a href="" class="dropdown-item">Blog Management</a>
                                     {% endif %}
                                     <a href="" class="dropdown-item">My Profile</a>
                                     <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
@@ -91,7 +93,7 @@
                         <!--Shopping Bag-->
                         <li class="list-inline-item">
                             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
-                                <div class="text-center">
+                                <div class="text-center bag-icon">
                                     <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                     <p class="my-0">
                                         {% if grand_total %}
@@ -107,7 +109,7 @@
                 </div>
             </div>
             <div class="row bg-white">
-                <nav class="navbar navbar-expand-lg navbar-light w-100">
+                <nav class="navbar navbar-expand-lg navbar-light main-navbar w-100">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -117,8 +119,8 @@
             </div>
             <!-- Free Shipping banner-->
             <div id="delivery-banner" class="row text-center">
-                <div class="col text-black delivery-banner-bg">
-                    <h5 class="logo-font my-1 text-uppercase">Free Delivery on order over ${{ free_shipping_threshold }}!</h5>
+                <div class="col  delivery-banner-bg">
+                    <h5 class="logo-font my-1 text-black text-uppercase">Free Delivery on order over ${{ free_shipping_threshold }}!</h5>
                 </div>
             </div>
         </header>
