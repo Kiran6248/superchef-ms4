@@ -4,7 +4,7 @@ html {
 
 body {
     background-size: cover;
-    background: #f1f1f0;
+    background: #fff;
     height: calc(100vh - 164px);
     font-family: 'Montserrat', sans-serif;
     color: #000 !important;
@@ -17,9 +17,6 @@ body {
 .border-black {
     border: 1px solid black !important;
 }
-
-
-
 
 /*-------------------------------------From Bulma */
 
