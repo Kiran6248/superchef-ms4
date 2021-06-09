@@ -20,10 +20,10 @@
                 Cookware
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="cookware-link">
-                <a href="" class="dropdown-item">Pots &amp; Pans</a>
-                <a href="" class="dropdown-item">Bakeware</a>
-                <a href="" class="dropdown-item">Knives</a>
-                <a href="" class="dropdown-item">All Cookware</a>
+                <a href="{% url 'products' %}?category=pots_pans" class="dropdown-item">Pots &amp; Pans</a>
+                <a href="{% url 'products' %}?category=bakeware" class="dropdown-item">Bakeware</a>
+                <a href="{% url 'products' %}?category=knives" class="dropdown-item">Knives</a>
+                <a href="{% url 'products' %}?category=pots_pans,bakeware,knives" class="dropdown-item">All Cookware</a>
             </div>
         </li>
         <!--Tableware button-->
@@ -32,10 +32,10 @@
                 Tableware
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="tableware-link">
-                <a href="" class="dropdown-item">Cutlery</a>
-                <a href="" class="dropdown-item">Crockery</a>
-                <a href="" class="dropdown-item">Glassware</a>
-                <a href="" class="dropdown-item">All Tableware</a>
+                <a href="{% url 'products' %}?category=cutlery" class="dropdown-item">Cutlery</a>
+                <a href="{% url 'products' %}?category=crockery" class="dropdown-item">Crockery</a>
+                <a href="{% url 'products' %}?category=glassware" class="dropdown-item">Glassware</a>
+                <a href="{% url 'products' %}?category=cutlery,crockery,glassware" class="dropdown-item">All Tableware</a>
             </div>
         </li>
         <!--Accessories button-->
@@ -44,10 +44,10 @@
                 Accessories
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="accessories-link">
-                <a href="" class="dropdown-item">Chopping Board</a>
-                <a href="" class="dropdown-item">Utensils</a>
-                <a href="" class="dropdown-item">Measuring</a>
-                <a href="" class="dropdown-item">All Accessories</a>
+                <a href="{% url 'products' %}?category=chopping_boards" class="dropdown-item">Chopping Boards</a>
+                <a href="{% url 'products' %}?category=utensils" class="dropdown-item">Utensils</a>
+                <a href="{% url 'products' %}?category=measuring" class="dropdown-item">Measuring</a>
+                <a href="{% url 'products' %}?category=chopping_boards,utensils,measuring" class="dropdown-item">All Accessories</a>
             </div>
         </li>
         <!-- Special Offer Button -->
@@ -56,10 +56,10 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
+                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
+                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
+                <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="dropdown-item">All Specials</a>
             </div>
         </li>
     </ul>
