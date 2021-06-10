@@ -5,9 +5,11 @@ html {
 body {
     background-size: cover;
     background: #fff;
-    height: calc(100vh - 164px);
+    min-height: 100vh;
     font-family: 'Montserrat', sans-serif;
     color: #000 !important;
+    display: flex;
+    flex-direction: column;
     
 }
 
@@ -69,6 +71,7 @@ a.category-badge > span.badge:hover {
 /*----------------------------------------Carousel */
 .carousel-item {
     position: relative;
+    /* height: 75vh; */
 }
 
 .carousel-inner {
@@ -244,6 +247,11 @@ footer {
     .container {
         max-width: 80%;
     }
+
+    .carousel-item {
+        position: relative;
+        height: 75vh;
+    }
 }
 
 /* fixed top navbar only on medium and up */
@@ -283,6 +291,10 @@ footer {
         padding-top: 150px;
     }
 
+    .cover-text {
+        top: -150px;
+    }
+
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
@@ -318,6 +330,7 @@ footer {
         font-size: .9rem;
     }
 
+    
     .carousel-item > img {
         object-fit: cover;
         height: calc(100vh - 380px);
@@ -327,7 +340,7 @@ footer {
     }
 
     .cover-text {
-        top: -120px;
+        top: -200px;
         font-size: 120%;
         width: 240px;
         height: 120px;
