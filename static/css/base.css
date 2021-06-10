@@ -19,6 +19,14 @@ body {
     border: 1px solid black !important;
 }
 
+a.category-badge > span.badge:hover {
+    background: #E1AD01 !important;
+    color: #000 !important;
+}
+
+.text-custom {
+    color: #E1AD01 !important;
+}
 /*-------------------------------------From Bulma */
 
 /* centeredt and consistent size for fontawesome */
