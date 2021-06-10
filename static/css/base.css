@@ -53,6 +53,19 @@ a.category-badge > span.badge:hover {
     font-weight: bold;
 }
 
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #E1AD01;
+}
+
+.btt-link {
+    cursor: pointer;
+}
+
 /*----------------------------------------Carousel */
 .carousel-item {
     position: relative;
