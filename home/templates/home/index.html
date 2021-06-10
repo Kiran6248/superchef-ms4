@@ -36,7 +36,7 @@
                                     <div class="col-12 col-md-3">
                                         <div class="cover-text">
                                             <h4>Checkout our Special Offers!</h4>
-                                            <a href="" class="btn btn-black rounded-0 btn-sm">Special offers</a>
+                                            <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="btn btn-black rounded-0 btn-sm">Special offers</a>
                                         </div>
                                     </div>
                                 </div>
@@ -49,7 +49,7 @@
                                     <div class="col-12 col-md-3">
                                         <div class="cover-text">
                                             <h4>Check Our latest Glassware Collection!</h4>
-                                            <a href="" class="btn btn-black rounded-0 btn-sm">Glasswares</a>
+                                            <a href="{% url 'products' %}?category=glassware" class="btn btn-black rounded-0 btn-sm">Glasswares</a>
                                         </div>
                                     </div>
                                 </div>
@@ -95,7 +95,7 @@
                             <div class="align-self-center mx-auto">
                                 <h5 class="card-title">Take a look at our special offers</h5>
                                 <!--Button to special offers page-->
-                                <a href="" class="btn btn-black btn-sm text-uppercase py-1">Shop Now!</a>
+                                <a href="{% url 'products' %}" class="btn btn-black btn-sm text-uppercase py-1">Shop Now!</a>
                             </div>
                         </div>
                     </div>
@@ -115,43 +115,61 @@
             <div class="container">
                 <!-- See all links-->
                 <div class="row see-all">
-                    <a href="" class="see-all-link">
+                    <a href="{% url 'products' %}?category=new_arrivals" class="see-all-link">
                         <small class="text-black">See All</small>
                         <i class="fas fa-arrow-right fa-xs ml-1 text-black"></i>
                     </a>
                 </div>
                 <!-- New arrival section for mobile and laptop screen sizes -->
                 <div class="row">
-                    <div class="col-12 col-md-4 d-sm-none d-md-block">
-                        <div class="card h-100 border-0">
-                            <!-- New arrival product image-->
-                            <a href="">
-                                <img src="{{ MEDIA_URL }}noimage.png" alt="" class="card-img-top img-fluid">
-                            </a>
-                            <!--New arrival Product Deatils -->
-                            <div class="card-body pb-0">
-                                <!-- Product Name -->
-                                <p class="mb-0">name</p>
-                            </div>
-                            <div class="card-footer bg-white pt-0 border-0 text-left">
-                                <div class="row">
-                                    <div class="col">
-                                        <!-- Product Price -->
-                                        <p class="lead mb-0 text-left font-weight-bold">$ price</p>
-                                        <p class="small mt-1 mb-0">
-                                            <!-- Product Category -->
-                                            <a href="" class="text-muted">
-                                                <i class="fas fa-tag mr-1"></i>
-                                            </a>
-                                        </p>
-                                        <!-- Product Rating -->
-                                        <small class="text-muted"><i class="fas fa-star mr-1"></i>rating / 5</small>
-                                        <small class="text-muted">No rating</small>
+                    {% for new_arrival in new_arrivals %}
+                        <div class="col-12 col-md-4 d-sm-none d-md-block">
+                            <div class="card h-100 border-0">
+                                <!-- New Arrival Product Image -->
+                                {% if new_arrival.image %}
+                                    <a href="{% url 'product_detail' new_arrivals.id %}">
+                                    <img src="{{ new_arrival.image.url }}" alt="{{ new_arrival.name }}"
+                                        class="card-img-top img-fluid">
+                                    </a>
+                                {% else %}
+                                    <a href="{% url 'product_detail' new_arrivals.id %}">
+                                    <img src="{{ MEDIA_URL }}noimage.png" alt="{{ new_arrival.name }}"
+                                        class="card-img-top img-fluid">
+                                    </a>
+                                {% endif %}
+                                <!-- New Arrival Product Details -->
+                                <div class="card-body pb-0">
+                                    <!-- Product Name -->
+                                    <p class="mb-0">{{ new_arrival.name }}</p>
+                                </div>
+                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col">
+                                            <!-- Product Price -->
+                                            <p class="lead mb-0 text-left font-weight-bold">£{{ new_arrival.price }}</p>
+                                            {% if new_arrival.category %}
+                                                <p class="small mt-1 mb-0">
+                                                    <!-- Product Category -->
+                                                    <a href="{% url 'products' %}?category={{ new_arrival.category.name }}"
+                                                        class="text-muted">
+                                                    <i class="fas fa-tag mr-1"></i>{{ new_arrival.category.friendly_name }}
+                                                    </a>
+                                                </p>
+                                            {% endif %}
+                                            <!-- Product Rating -->
+                                            {% if new_arrival.rating %}
+                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ new_arrival.rating }} /
+                                                5</small>
+                                            {% else %}
+                                                <small class="text-muted">No Rating</small>
+                                            {% endif %}
+                                            
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
