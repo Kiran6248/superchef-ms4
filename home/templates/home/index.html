@@ -122,17 +122,68 @@
                 </div>
                 <!-- New arrival section for mobile and laptop screen sizes -->
                 <div class="row">
-                    {% for new_arrival in new_arrivals %}
+                    {% for new_arrival in home_new_arrivals|slice:":3" %}
                         <div class="col-12 col-md-4 d-sm-none d-md-block">
                             <div class="card h-100 border-0">
                                 <!-- New Arrival Product Image -->
                                 {% if new_arrival.image %}
-                                    <a href="{% url 'product_detail' new_arrivals.id %}">
+                                    <a href="{% url 'product_detail' new_arrival.id %}">
                                     <img src="{{ new_arrival.image.url }}" alt="{{ new_arrival.name }}"
                                         class="card-img-top img-fluid">
                                     </a>
                                 {% else %}
-                                    <a href="{% url 'product_detail' new_arrivals.id %}">
+                                    <a href="{% url 'product_detail' new_arrival.id %}">
+                                    <img src="{{ MEDIA_URL }}noimage.png" alt="{{ new_arrival.name }}"
+                                        class="card-img-top img-fluid">
+                                    </a>
+                                {% endif %}
+                                <!-- New Arrival Product Details -->
+                                <div class="card-body pb-0">
+                                    <!-- Product Name -->
+                                    <p class="mb-0">{{ new_arrival.name }}</p>
+                                </div>
+                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col">
+                                            <!-- Product Price -->
+                                            <p class="lead mb-0 text-left font-weight-bold">£{{ new_arrival.price }}</p>
+                                            {% if new_arrival.category %}
+                                                <p class="small mt-1 mb-0">
+                                                    <!-- Product Category -->
+                                                    <a href="{% url 'products' %}?category={{ new_arrival.category.name }}"
+                                                        class="text-muted">
+                                                    <i class="fas fa-tag mr-1"></i>{{ new_arrival.category.friendly_name }}
+                                                    </a>
+                                                </p>
+                                            {% endif %}
+                                            <!-- Product Rating -->
+                                            {% if new_arrival.rating %}
+                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ new_arrival.rating }} /
+                                                5</small>
+                                            {% else %}
+                                                <small class="text-muted">No Rating</small>
+                                            {% endif %}
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <!-- New arrival section for tablet screen-->
+                <div class="row">
+                    {% for new_arrival in home_new_arrivals|slice:":4" %}
+                        <div class="col-sm-6 d-none d-sm-block d-md-none">
+                            <div class="card h-100 border-0">
+                                <!-- New Arrival Product Image -->
+                                {% if new_arrival.image %}
+                                    <a href="{% url 'product_detail' new_arrival.id %}">
+                                    <img src="{{ new_arrival.image.url }}" alt="{{ new_arrival.name }}"
+                                        class="card-img-top img-fluid">
+                                    </a>
+                                {% else %}
+                                    <a href="{% url 'product_detail' new_arrival.id %}">
                                     <img src="{{ MEDIA_URL }}noimage.png" alt="{{ new_arrival.name }}"
                                         class="card-img-top img-fluid">
                                     </a>
