@@ -70,7 +70,9 @@ a.category-badge > span.badge:hover {
     background-color: #E1AD01;
 }
 
-.btt-link {
+.btt-link,
+.update-link,
+.remove-item {
     cursor: pointer;
 }
 
