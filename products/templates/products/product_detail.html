@@ -14,6 +14,7 @@
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                 <div class="image-container my-5">
+                    <!-- Product Image -->
                     {% if product.image %}
                         <a href="{{ product.image.url }}" target="_blank">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -27,8 +28,11 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5">
+                    <!-- Product Name -->
                     <p class="mb-0">{{ product.name }}</p>
+                    <!-- product Price -->
                     <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                    <!-- Product Category -->
                     {% if product.category %}
                         <p class="small mt-1 mb-0">
                             <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
@@ -36,16 +40,19 @@
                             </a>
                         </p>
                     {% endif %}
+                    <!-- Product Rating -->
                     {% if product.rating %}
                         <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ produst.rating }} / 5</small>
                     {% else %}
                         <small class="text-muted">No Rating</small>
                     {% endif %}
+                    <!-- Product Description -->
                     <p class="mt-3">{{ product.description }}</p>
                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-now">
                             <div class="col-12">
+                                <!-- Product Quantity -->
                                 <p class="mt-3"><strong>Quantity:</strong></p>
                                 <div class="form-group w-50">
                                     <div class="input-group">
@@ -74,14 +81,15 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="col-12">
+                                <!-- Continue Shopping button -->
                                 <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
+                                <!-- Add to basket button -->
                                 <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
