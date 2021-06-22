@@ -50,7 +50,7 @@
                     {% if request.user.is_superuser %}
                         <small class="ml-3">
                             <a href="{% url 'edit_product' product.id %}">Edit</a> |
-                            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                            <a class="text-danger" href="#deleteProduct{{ product.id }}" data-toggle="modal">Delete</a>
                         </small>
                     {% endif %}
                     <!-- Product Description -->
@@ -102,6 +102,32 @@
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+        <!-- Delete Modal-->
+        <div class="modal fade text-center" id="deleteProduct{{ product.id }}" tabindex="-1" role="dialog" aria-labelledby="deleteProduct{{ product.id }}ModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- Close button -->
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <!-- Modal Heading -->
+                        <h5 class="modal-title" id="deleteProduct{{ product.id }}Label">
+                            Are you sure you want to delete <br>" {{ product.name }} " ? <br>
+                        </h5>
+                        <p>Once done can not be undo this action.</p>
+                    </div>
+                    <div class="modal-footer modal-btns">
+                        <!-- Cancel button -->
+                        <button type="button" class="btn text-uppercase cancel-btn" data-dismiss="modal">Cancel</button>
+                        <!-- Delete Button -->
+                        <a id="checkoutButton" href="{% url 'delete_product' product.id %}" class="btn delete-btn">
+                            <span class="text-uppercase text-danger">Delete</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

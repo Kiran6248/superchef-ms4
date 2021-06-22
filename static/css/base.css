@@ -263,6 +263,19 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
+/* -------------------------------------- Modal */
+.modal-header {
+    display: block;
+}
+
+.modal-header p  {
+    margin-top: 1rem;
+}
+
+.modal-btns {
+    display: initial;
+}
+
 /*--------------------------------------- Footer */
 
 footer {
