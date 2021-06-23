@@ -37,11 +37,11 @@
                             <div class="col-lg-4">
                                 <!-- Blog Image -->
                                 {% if blog.image %}
-                                    <a href="" target="_blank">
+                                    <a href="{% url 'blog_detail' blog.slug %}" target="_blank">
                                         <img src="{{ blog.image.url }}" alt="{{ blog.name }}" class="card-img img-fluid">
                                     </a>
                                 {% else %}
-                                <a href="" target="_blank">
+                                <a href="{% url 'blog_detail' blog.slug %}" target="_blank">
                                     <img src="{{ MEDIA_URL }}noimage.png" alt="{{ blog.name }}" class="card-img img-fluid">
                                 </a>
                                 {% endif %}
@@ -49,12 +49,12 @@
                             <!-- Card Body -->
                             <div class="col-lg-8">
                                 <div class="card-body">
-                                    <a href="" target="_blank" class="text-black">
+                                    <a href="{% url 'blog_detail' blog.slug %}" target="_blank" class="text-black">
                                         <h5 class="card-title blog-details-title mb-1">{{ blog.title }}</h5>
                                     </a>
                                     <small class="card-text text-muted">{{ blog.author }} | {{ blog.created_on }}</small>
                                     <p class="card-text mt-2">{{ blog.body|slice:':150' }} ...</p>
-                                    <a href="" target="_blank" class="btn btn-black btn-sm text-uppercase">Read More</a>
+                                    <a href="{% url 'blog_detail' blog.slug %}" target="_blank" class="btn btn-black btn-sm text-uppercase">Read More</a>
                                 </div>
                             </div>
                         </div>

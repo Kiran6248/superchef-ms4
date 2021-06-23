@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="blog-image-container mx-auto">
+                    <!-- Blog Image -->
+                    {% if blog.image %}
+                        <a href="{{ blog.image.url}}" target="_blank">
+                            <img src="{{ blog.image.url }}" alt="{{ blog.name }}" class="card-img img-fluid">
+                        </a>
+                    {% else %}
+                        <a href="">
+                            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ blog.name }}" class="img-fluid">
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center mt-4">
+                <!-- Blog Title -->
+                <h2 class="text-uppercase blog-details-title">{{ blog.title }}</h2>
+                <!-- Blog Author and date -->
+                <p class="text-muted">Written by <strong>{{ blog.author }} | {{ blog.created_on }}</strong></p>
+                <!-- Blog Content -->
+                <p class="blog-content">{{ blog.body }}</p>
+            </div>
+        </div>
+    </div>      
+{% endblock %}
