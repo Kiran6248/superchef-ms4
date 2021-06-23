@@ -1,0 +1,12 @@
+.blog-section {
+    margin-bottom: 1rem;
+}
+
+.blog-image-container {
+    width: 75%;
+    margin-top: 3rem;
+}
+
+.card-img {
+    max-height: 550px;
+}

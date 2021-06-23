@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <!-- Page Heading -->
+                <h2 class="text-uppercase">Blogs</h2>
+                <hr class="w-50">
+            </div>
+        </div> 
+        <!-- Page sunheading -->
+        <div class="row">
+            <div class="col-12 text-center mt-3 mb-3">
+                <h6 class="text-uppercase">Take a look at our informative blogs.</h6>
+            </div>
+        </div>
+        <div class="row">
+            <div class="blog-container blog-section col-10 offset-1">
+                {% for blog in blogs %}
+                    <!-- Blog Card -->
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-lg-4">
+                                <!-- Blog Image -->
+                                {% if blog.image %}
+                                    <a href="" target="_blank">
+                                        <img src="{{ blog.image.url }}" alt="{{ blog.name }}" class="card-img img-fluid">
+                                    </a>
+                                {% else %}
+                                <a href="" target="_blank">
+                                    <img src="{{ MEDIA_URL }}noimage.png" alt="{{ blog.name }}" class="card-img img-fluid">
+                                </a>
+                                {% endif %}
+                            </div>
+                            <!-- Card Body -->
+                            <div class="col-lg-8">
+                                <div class="card-body">
+                                    <a href="" target="_blank" class="text-black">
+                                        <h5 class="card-title blog-details-title mb-1">{{ blog.title }}</h5>
+                                    </a>
+                                    <small class="card-text text-muted">{{ blog.author }} | {{ blog.created_on }}</small>
+                                    <p class="card-text mt-2">{{ blog.body|slice:':150' }} ...</p>
+                                    <a href="" target="_blank" class="btn btn-black btn-sm text-uppercase">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
