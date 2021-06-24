@@ -37,6 +37,13 @@
                 <h2 class="text-uppercase blog-details-title">{{ blog.title }}</h2>
                 <!-- Blog Author and date -->
                 <p class="text-muted">Written by <strong>{{ blog.author }} | {{ blog.created_on }}</strong></p>
+                <!-- Superuser edit/delete buttons -->
+                {% if request.user.is_superuser %}
+                    <small class="ml-2">
+                        <a href="{% url 'edit_blog' blog.slug %}">Edit</a>
+                        <a href="" class="text-danger" data-toggle="modal">Delete</a>
+                    </small>
+                {% endif %}
                 <!-- Blog Content -->
                 <p class="blog-content">{{ blog.body }}</p>
             </div>
