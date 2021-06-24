@@ -49,8 +49,45 @@
             </div>
             <a href="{% url 'blogs' %}" class="btn btn-black rounded-0 mb-2">Back to Blogs</a>
         </div>
-    </div> 
    
+
+        <div class="row">
+            <div class="col-12 card mb-4  mt-3 ">
+                <div class="card-body">
+                <!-- comments -->
+                <h2>{{ comments.count }} comments</h2>
+        
+                {% for comment in comments %}
+                <div class="comments mb-2">
+                    <p class="font-weight-bold">
+                    {{ comment.name }}
+                    <span class=" text-muted font-weight-normal">
+                        {{ comment.created_on }}
+                    </span>
+                    </p>
+                    {{ comment.body | linebreaks }}
+                </div>
+                {% endfor %}
+                </div>
+            </div>
+            <div class="col-12 card mb-4  mt-3 ">
+                <div class="card-body">
+                {% if new_comment %}
+                <div class="alert alert-success" role="alert">
+                    Your comment is awaiting moderation
+                </div>
+                {% else %}
+                <h3>Leave a comment</h3>
+                <form method="POST">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
+                </form>
+                {% endif %}
+                </div>
+            </div>
+        </div>
+    </div> 
     <!-- Delete Modal -->
     <div class="modal fade text-center" id="deleteBlog{{ blog.slug }}" tabindex="-1" role="dialog" aria-labelledby="deleteBlog{{ blog.slug }}ModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">

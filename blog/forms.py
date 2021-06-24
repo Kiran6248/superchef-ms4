@@ -23,5 +23,5 @@ class CommentForm(forms.ModelForm):
     """
 
     class Meta:
-        modal = Comment
+        model = Comment
         fields = ('name', 'email', 'body')
