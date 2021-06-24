@@ -1,6 +1,7 @@
 from django import forms
 from .widgets import CustomClearableFileInput
 from .models import BlogPost
+from .models import Comment
 
 
 class BlogForm(forms.ModelForm):
@@ -14,3 +15,13 @@ class BlogForm(forms.ModelForm):
 
     image = forms.ImageField(
         label='Image', required=False, widget=CustomClearableFileInput)
+
+
+class CommentForm(forms.ModelForm):
+    """
+    Form to add comments to blog
+    """
+
+    class Meta:
+        modal = Comment
+        fields = ('name', 'email', 'body')
