@@ -92,3 +92,18 @@ def edit_blog(request, slug):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_blog(request, slug):
+    """
+    Delete a blog from the blog page
+    """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, this is only for store owners.')
+        return redirect(reverse('home'))
+    
+    blog = get_object_or_404(BlogPost, slug=slug)
+    blog.delete()
+    messages.success(request, f'Successfully deleted "{blog.title}" .')
+    return redirect(reverse('blogs'))
