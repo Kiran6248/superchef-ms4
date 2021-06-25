@@ -47,13 +47,13 @@
                 <!-- Blog Content -->
                 <p class="blog-content">{{ blog.body }}</p>
             </div>
-            <a href="{% url 'blogs' %}" class="btn btn-black rounded-0 mb-2">Back to Blogs</a>
+            <a href="{% url 'blogs' %}" class="btn btn-black rounded-0 mb-2 ml-2">Back to Blogs</a>
         </div>
    
         <!-- Comments -->
         <div class="row">
             <div class="col-12 col-md-8 card mb-4 mt-3 ">
-                <div class="card-body">
+                <div class="card-body form-card">
                 <!-- Comment count -->
                 <h2>{{ comments.count }} comments</h2>
                 {% for comment in comments %}
