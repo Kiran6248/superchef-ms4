@@ -253,6 +253,10 @@ Images used are taken from [Unsplash](https://unsplash.com/) and [Google](https:
         
         'django.template.context_processors.media',
 
+* Blog and comments on blog are the 2 extra models which were decided by me to add in the project. Adding Blog , Editing it and Deleting dunctions worked fine but when I added comment model and wrote view for it, the blog detail section started giving error, those errors were unfamiliar to me. So, i contacted Tutor support but could not get any help from there. So I started going line by line and trying to understand it and I found that my comment variable in database has no connection with the blog variable in the view. So, I made the correction and after few trial the view started working. The line which was written wrong and then corrected was 
+
+         'new_comment.post = blog'
+
 ### **Known Issues**
 
 [Go back to Top](#table-of-content)
