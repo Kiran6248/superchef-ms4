@@ -50,27 +50,28 @@
             <a href="{% url 'blogs' %}" class="btn btn-black rounded-0 mb-2">Back to Blogs</a>
         </div>
    
-
+        <!-- Comments -->
         <div class="row">
-            <div class="col-12 card mb-4  mt-3 ">
+            <div class="col-12 col-md-8 card mb-4 mt-3 ">
                 <div class="card-body">
-                <!-- comments -->
+                <!-- Comment count -->
                 <h2>{{ comments.count }} comments</h2>
-        
                 {% for comment in comments %}
-                <div class="comments mb-2">
-                    <p class="font-weight-bold">
-                    {{ comment.name }}
-                    <span class=" text-muted font-weight-normal">
-                        {{ comment.created_on }}
-                    </span>
-                    </p>
-                    {{ comment.body | linebreaks }}
-                </div>
+                    <div class="comments mb-2">
+                        <!-- Comment name, date and body -->
+                        <p class="font-weight-bold">
+                        {{ comment.name }}
+                        <span class=" text-muted font-weight-normal">
+                            {{ comment.created_on }}
+                        </span>
+                        </p>
+                        {{ comment.body | linebreaks }}
+                    </div>
                 {% endfor %}
                 </div>
             </div>
-            <div class="col-12 card mb-4  mt-3 ">
+            <!-- Comment Form -->
+            <div class="col-12 col-md-8 card mb-4 mt-3 ">
                 <div class="card-body">
                 {% if new_comment %}
                 <div class="alert alert-success" role="alert">
@@ -81,7 +82,7 @@
                 <form method="POST">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
+                    <button type="submit" class="btn btn-black rounded-0 ">Submit</button>
                 </form>
                 {% endif %}
                 </div>

@@ -28,16 +28,13 @@ def blog_detail(request, slug):
     new_comment = None
 
     if request.method == 'POST':
-        
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
-
             new_comment = comment_form.save(commit=False)
             new_comment.post = blog
             new_comment.save()
     else:
         comment_form = CommentForm()
-   
 
     return render(request, template_name, {'blog': blog,
                                            'comments': comments,
@@ -53,7 +50,7 @@ def add_blog(request):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, this is onlt for store qwners.')
         return redirect(reverse('home'))
-    
+
     if request.method == 'POST':
         form = BlogForm(request.POST, request.FILES)
         if form.is_valid():
@@ -66,14 +63,13 @@ def add_blog(request):
                     Please check the form is valid and try again.')
     else:
         form = BlogForm()
-    
+
     template = 'blog/add_blog.html'
     context = {
         'form': form,
     }
 
     return render(request, template, context)
-
 
 
 @login_required
@@ -84,7 +80,7 @@ def edit_blog(request, slug):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, this is only for store owners.')
         return redirect(reverse('home'))
-    
+
     blog = get_object_or_404(BlogPost, slug=slug)
 
     if request.method == 'POST':
@@ -99,7 +95,7 @@ def edit_blog(request, slug):
     else:
         form = BlogForm(instance=blog)
         messages.info(request, f'You are editing "{blog.title}" .')
-    
+
     template = 'blog/edit_blog.html'
     context = {
         'form': form,
@@ -117,7 +113,7 @@ def delete_blog(request, slug):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, this is only for store owners.')
         return redirect(reverse('home'))
-    
+
     blog = get_object_or_404(BlogPost, slug=slug)
     blog.delete()
     messages.success(request, f'Successfully deleted "{blog.title}" .')
