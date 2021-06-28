@@ -558,4 +558,10 @@ footer {
     .social-links {
         margin-top: 15px;
     }
+
+    .btn.btn-outline-black.rounded-0.btn-lg,
+    .btn.btn-black.rounded-0.btn-lg {
+        padding: .200rem .200rem;
+        font-size: .75rem;
+    }
 }
