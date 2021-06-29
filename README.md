@@ -213,9 +213,34 @@ Sitemap can be seen here. [Sitemap](docs/wireframes/Sitemap.pdf)
 ### **Surface**
 #### **Color**
 
+The color used for this project are kept very minimum, so that the strong tonal varitaion provides a good contrast. The main color used for the project is Mustard yellow(#E1AD01), which goes very well with the kitchen theme and it is a good contrast with the other two colors Black(#000000) and White(#ffffff).
+
+The colors used are:
+
+![image](docs/Capture.JPG)
+
+Mustard Yellow color is used for delivery Banner and hover over across page. The Text color used are mainly black and changes to mustard yellow when hovered over.
+The placeholder text for the form have color Cadet Blue(#AAB7C4) and rating text of the product description is Bootstrap text-muted class Slate Gray(#6C757d)
+
+
+
 #### **Core**
 
+The Core of the project is kept Black and White. The navbar is White and Main nav is Black, which has text written in white that changes to mustard yellow when hovered over. 
+The Footer is Black with texts of white color. The social media links and Contact link changes to mustard yellow color when hovered over.
+The pages of the project are kept white to make a good contrast with the products images.
+
 #### **Buttons**
+
+The Buttons are kept black with text white, which changes to mustard yellow when hovered over.
+The edit and delete links have given a consistent coloue with the intuitative suggestions about their functions.
+The edit is kept Dodger Blue(#007BFF) and Delete link is Amaranth(#DC3545)
+The back to top button is Mustard yellow(#E1AD01)
+
+*  ![#000000](https://via.placeholder.com/15/00000/000000?text=+) `#000000` (Black)
+*  ![#007BFF](https://via.placeholder.com/15/007bff/000000?text=+) `#007bff` (Dodger Blue)
+*  ![#DC3545](https://via.placeholder.com/15/dc3545/000000?text=+) `#DC3645`(Amaranth)
+*  ![#E1AD01](https://via.placeholder.com/15/e1ad01/000000?text=+) `#E1AD01`(Mustard Yellow)
 
 #### **Typography**
 
