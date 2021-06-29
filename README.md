@@ -44,9 +44,9 @@ This project is plugged into a **PostgreSQL** database, with **SQlite3** used in
 
 * [Technologies used](#technologies-used)
     * [Languages Used](#languages-used)
-    * [Frameworks](#frameworks)
+    * [Libraries, Frameworks and Editors](#libraries-frameworks-and-editors)
     * [Extensions and Kits](#extensions-and-kits) 
-    * [Project Management](#project-management)
+    * [Databases](#databases)
     * [Tools](#tools)
 
 * [Bugs](#bugs)
@@ -266,6 +266,30 @@ Images used are taken from [Unsplash](https://unsplash.com/) and [Google](https:
 ***
 
 ## **Technologies used**
+
+### **Languages Used**
+
+* [HTML](https://en.wikipedia.org/wiki/HTML) is the main language used to write code for this project.
+* [CSS](https://en.wikipedia.org/wiki/CSS) is used to write code for designing and beautifying the site.
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript) is used to add functionality and make the site more interactive.
+* [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) is used for the Backend Programming.
+  * [jinja](https://en.wikipedia.org/wiki/Jinja_(template_engine)) is used as the template engine for Python.
+
+### **Libraries, Frameworks and Editors**
+
+ * [Django](https://www.djangoproject.com/) is a Python Web Framework, which is used for development.
+ * [jQuery](https://jquery.com/) was used for the interactive features.
+ * [Bootstrap](https://getbootstrap.com/) is used to make main structure and layout of the project.
+ * [Google Fonts](https://fonts.google.com/) was used for the font 'Montserrat' for this project .
+ * [Font Awesome](https://fontawesome.com/) is used to import Social media icons to beautify the footer, and icons for bag and user in every page.
+ * [GitPod](https://gitpod.io/workspaces/) is the main cloud-based editor for this project. Workspaces are made using the green Gitpod button in Github.
+ * [GitHub](https://github.com/) is used to make **Repositories** and for **Version Control**.
+ * [Git](https://git-scm.com/) was used for version control by making use of the gitpod terminal to add, commit and push to github..
+ * [Heroku](https://www.heroku.com/about) was used for deploying the app.
+ * [Unsplash](https://unsplash.com/) was used to get imagesfor background and blogs.
+ * [Google Images](https://www.google.com/) was used to get images for the products.
+
+
 
 [Go back to Top](#table-of-content)
 ***
