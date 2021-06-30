@@ -262,6 +262,27 @@ Images used are taken from [Unsplash](https://unsplash.com/) and [Google](https:
 
 ## **Features**
 
+### **Features Used**
+**Navigation Bar:**
+
+All pages of the project have a fixed top navigation bar which has a search box, Site logo, and 2 icons, One is for *my Account* and another is *bag* icon.
+The search box can be use to search by keywords of the product name or description. The My account icon is a dropdown list, which shows login and register links for the first time users. If the user has registered and logged in then then it will show a link to *my profile* and *logout* page. If the user is a superuser/admin then links to *Product management* and *Blog Management* are also visible. The bag icon takes us to *shopping Bag* page after clicking on it and it also displays the total amount of the products already in the bag. This section is fully responsive and in the mobile view the search box is replaced by only the icon of the search and search box appears after clicking on it. 
+The navigation bar consiste of one **Main Nav** also, which is a list of all the categories of the products used in the project. These list have links based on price and rating of the product also. This section changes to a collapsible hamburger menu on the left side of the screen for the smaller screen view. 
+There is one delivery banner also which displays the message about the free delivery threshold for the project.
+
+**Footer:**
+
+The Footer is a *Sticky Footer* , which is visible in every page of the project. The footer has 3 sections, one is the copyright information about the site owner, second is the font awesome icons of the social media *Facebook*, *Twitter*, and *Instagram*. The links takes the user to the respective sites after clicking on it.
+The third section is a *Contact Us* link, which opens the contact form after clicking.
+
+**Index page:**
+
+The Index page or landing Page is divided in 3 sections. First section has a Carousal with 3 images. Each image has a cover text which has some information and a button to take the user to the relative page.
+Second section has 2 cards, one is a image of a blog and a button to take the user to the **Blog** page and second is an iamge of kitchen and a button to go to The main Product page.
+Last section has a **Special Offer** section which displays the iamges of special offer category products and a *See All* link to take the user to the special offer section. The product images are also clickable and takes the user to the product description page.
+
+
+
 [Go back to Top](#table-of-content)
 ***
 
