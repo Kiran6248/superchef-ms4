@@ -281,6 +281,40 @@ The Index page or landing Page is divided in 3 sections. First section has a Car
 Second section has 2 cards, one is a image of a blog and a button to take the user to the **Blog** page and second is an iamge of kitchen and a button to go to The main Product page.
 Last section has a **Special Offer** section which displays the iamges of special offer category products and a *See All* link to take the user to the special offer section. The product images are also clickable and takes the user to the product description page.
 
+**Products page:**
+
+Products can be viewed in many different ways. The product is displayed in the form of a card, which has *product image*, *product price*, *product category*(which is also a clickable badge to take the user to that category), *product rating* and *edit and delete* button. 
+Product Image takes the user to Product detail page when clicked. Edit and delete button are only visible to the superuser.
+This page also has a sort button which displays the products in that specific sort order (Price(low to high), Price(high to low), Rating(low to high), Rating(high to low), Name(A-Z), Name(Z-A), Category(A-Z) and Category(Z-A)).
+
+**Product Detail page:**
+
+Product Detail page has Image of the product on left side, which is clickable and opens the product image in a new tab. Left side of the page has *product name*, *product price*, *product rating*, *category*, *edit /delete* button(for superuser), *product description*, *quantity selector*, and 2 buttons, one for *keep shopping* and another for *Add to bag*.
+
+**Profile page:**
+
+The profile page can be accessed by the **My account** link in the navbar. This page is divided in 2 sections. One is having a information form, which is empty in the beginning and get filled automatically after user enters its information in checkout page. There is an *Update Information* button in the end, for the user to change any detail if he wants. 
+The second section is *Order History* list, which displays the orders placed by The user. It shows *Order Number*, *date*, *Item name* and *Order Total*.
+The Order Number shows only 5 digits in the form but when clicked it opens the page of **order history**.
+
+**Order history:**
+
+This page can be accessed by the profile page and clicking on the order number. The order history page shows *order info* (order number and order details), *order details* (item name and price), *Delivering To* (Full name, Address1, Address2, County, Town or city, Postal Code, Country Phone Number), *Billing Info* (order total, delivery and Grand Total). There is a *Back to Profile* button at the end whish takes back to the profile page.
+
+**Shopping Page:**
+
+The shopping page can be viewed by clicking the bag icon on the navbar. The shopping page shows the details of the products added by the user in his/her bag. It shows *product info* (product image, product name and sku), *Price*, *Quantity selector box* , and *Subtotal*. There are 2 buttons given below the quantity selector, one is *update* button, to increase or decrease the quantity of the product and another is *remove* button, to remove the item from the bag.
+This page shows *Bag total*, *Delivery cost* and *Grand Total* also. If the discount threshold is not reached then one message will show about how much to spend more to reach that threshold. There are 2 buttons given in the bottom, one for keep shopping and another for secure checkout.
+
+Thia page looks different in mobile view, where *Bag total*, *Delivery cost* and *Grand Total* are at the top of the page. And one *back to top* button is also added in case user has multiple products and page becomes very long. 
+
+**Checkout Page:**
+
+
+
+
+
+
 
 
 [Go back to Top](#table-of-content)
