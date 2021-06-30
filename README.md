@@ -278,17 +278,43 @@ Images used are taken from [Unsplash](https://unsplash.com/) and [Google](https:
 ### **Libraries, Frameworks and Editors**
 
  * [Django](https://www.djangoproject.com/) is a Python Web Framework, which is used for development.
+ * [AWS S3](https://aws.amazon.com/s3/) cloud storage for static and media files.
+ * [VS Code](https://code.visualstudio.com/) main workspace IDE(integrated Development Environment).
  * [jQuery](https://jquery.com/) was used for the interactive features.
  * [Bootstrap](https://getbootstrap.com/) is used to make main structure and layout of the project.
  * [Google Fonts](https://fonts.google.com/) was used for the font 'Montserrat' for this project .
  * [Font Awesome](https://fontawesome.com/) is used to import Social media icons to beautify the footer, and icons for bag and user in every page.
- * [GitPod](https://gitpod.io/workspaces/) is the main cloud-based editor for this project. Workspaces are made using the green Gitpod button in Github.
  * [GitHub](https://github.com/) is used to make **Repositories** and for **Version Control**.
  * [Git](https://git-scm.com/) was used for version control by making use of the gitpod terminal to add, commit and push to github..
  * [Heroku](https://www.heroku.com/about) was used for deploying the app.
  * [Unsplash](https://unsplash.com/) was used to get imagesfor background and blogs.
  * [Google Images](https://www.google.com/) was used to get images for the products.
 
+### **Extensions and Kits**
+
+ * [Django allauth](https://django-allauth.readthedocs.io/en/latest/) was used as authentication system.
+ * [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) was used to format forms.
+ * [Pillow](https://pillow.readthedocs.io/en/stable/) Python imaging library to help store imagery into a database.
+ * [psycopg2](https://pypi.org/project/psycopg2/) PostgreSQL database adapter for the Python.
+
+### **Databases**
+
+ * [Sqlite 3](https://www.sqlite.org/index.html) Used as development database.
+ * [PostgresSQL](https://www.postgresql.org/) used as the database for deployment.
+
+### **Tools**
+
+ * [Stripe](https://stripe.com/ie) used as as the payment infrastucture to take payments on the site.
+ * [Am I Responsive?](http://ami.responsivedesign.is/) is used to take a mockup screenshot of the project, which is attached at the beginning of this document.
+ * [Autoprefixer](https://autoprefixer.github.io/) is used to make the site compatible with all browsers.
+ * [iColorpalette](https://icolorpalette.com/) is used to find a relevant color palette for the site.
+ * [W3C Validator](https://validator.w3.org/) is used for testing HTML and CSS for the site.
+ * [JSHint](https://jshint.com/) is used for testing javascript code for the site.
+ * [PEP8 online](http://pep8online.com/) is used for testing Python codes.
+ * [Online Spelling Check](https://www.grammarly.com/), Grammarly is used to check spelling and grammatical errors.
+ * [Snipping Tool](https://en.wikipedia.org/wiki/Snipping_Tool) was used to take screenshots of the images and codes.
+ * [TinyPNG](https://tinypng.com/) is used to reduce the size of the Hero Image.
+ * [Balsamiq](https://balsamiq.com/wireframes/) is used to make wireframes for this project in the skeleton stage.
 
 
 [Go back to Top](#table-of-content)
