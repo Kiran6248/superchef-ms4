@@ -387,6 +387,19 @@ Thia page looks different in mobile view, where *Bag total*, *Delivery cost* and
 
          'new_comment.post = blog'
 
+* The biggest project barrier came on the day of deployment, On 1st july 2021 Gitpod had some incident which dleted all uncommited files from every workspace open during that time. My workspace was open as I was going to do deployment. The workspace stopped working and We got instructions from Gitpod.
+
+  ![image](docs/gitpod.JPG)
+
+I lost my SQL database after that incident, 
+
+  ![image](docs/db.JPG)
+
+Gitpod sent me .tar files which was very complicated to read and implement for me.
+
+  ![image](docs/tar.JPG)
+
+So I install the requirements again, Did the migrations and uploaded Categories, Products and Blogs again.
 ### **Known Issues**
 
 [Go back to Top](#table-of-content)
