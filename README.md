@@ -4,7 +4,7 @@
 
 [View live site here](https://superchef-ms4.herokuapp.com/)
 
-![image]()
+![image](docs/responsive.JPG)
 
 This is my fourth and final milestone project for Code institute’s full stack web developer diploma. This project is a **Django web application** made with the use of **HTML**, **CSS**, **JavaScript** and **Python** and utilizing a relational database.
 **Stripe** is also used for payment system.
