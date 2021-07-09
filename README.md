@@ -2,7 +2,7 @@
 
 ### An E-commerce site for purchasing of Kitchen accessories.
 
-[View live site here]()
+[View live site here](https://superchef-ms4.herokuapp.com/)
 
 ![image]()
 
@@ -291,6 +291,10 @@ This page also has a sort button which displays the products in that specific so
 
 Product Detail page has Image of the product on left side, which is clickable and opens the product image in a new tab. Left side of the page has *product name*, *product price*, *product rating*, *category*, *edit /delete* button(for superuser), *product description*, *quantity selector*, and 2 buttons, one for *keep shopping* and another for *Add to bag*.
 
+**Product Management Page:**
+
+Product management page opens after clicking the product management link in the my profile dropdown in navbar. this link is only visible to the admin. This page can be used to add or edit new products. The add products page opens with a form to select the category in the dropdown menu, Place to write 'sku', 'name', 'description' 'price', 'rating', 'image url' and a button to select the image. Two buttons are given, one to cancel the action and another to add the product. When the admin selects the edit action the page will open with advance populated with the product information and detail. Product image is also visible to take better decision. This image section is made with django widgets for better user experience. Two buttons are given to edit or cancel the action. After adding or editing the product, product detail page opens. 
+
 **Profile page:**
 
 The profile page can be accessed by the **My account** link in the navbar. This page is divided in 2 sections. One is having a information form, which is empty in the beginning and get filled automatically after user enters its information in checkout page. There is an *Update Information* button in the end, for the user to change any detail if he wants. 
@@ -310,11 +314,45 @@ Thia page looks different in mobile view, where *Bag total*, *Delivery cost* and
 
 **Checkout Page:**
 
+The checkout page can be viewed by clicking secure checkout button on the shopping bag page. The checkout page is divided in two sections horizontally. First one is having the details of the customer 'full name', 'email address', 'phone number', 'address', 'county', 'postal code', and a dropdown selection for the country. One more box is given to enter the card number. If the user is not logged in then one information will display to tell the user to login to save this information and if the user is not registered then he/she can use create account link to register. two buttons are given at the bottom, one to *adjust bag* and another to *complete order*.
+Below the buttons the total purchase amount is shown in red color.
+The second section of the checkout page shows the *order summary* of the order placed by the user. It displays product image, product name, sub total, delivery, grand total.
 
+**Checkout Success Page:**
 
+This page can be viewed by clicking *Complete Order* button on the checkout page, This page is same as *order history* page. 
 
+**Blog Page:**
 
+Blog is created to view by every user. It can be accessed by any user by clicking the blog link on home page. The blog page shows rows of all the blogs. Every row have one blog image, Name of the blog, Name of the person who added the blog, Date and time of blog added, And first 150 characters of the blog details. There is a *read more* button the open the blog in the different page for a full view. The image of the blog will also open the blog in the detail view. There is one edit and delete link, only visible to the superuser. In mobile view the blog image will take the full width and blog name and other details will come below the blog.
 
+**Blog Deatils Page:**
+
+Blog details page can be opened by clicking the blog name or image or read more button on blog page. This page contains a big blog image and full blog detail. There is a back to blog button given at the end of the blog detail, which takes back to main blog page.
+
+**Blog Comments section:**
+
+One comment section is added at the blog detail page after the back to blog button. In this comment section, anybody can Enter their name and email id and Add their comments and submit through ta submit button. The comments needs approval by the Admin. This feature is added for the safety reasons to avoid any spam or unacceptable comments. After the approval the comment is visible with the person's name, date and time of the comment.
+
+**Blog Management Page:**
+
+The blog management page is visible only to the admin byt clicking the blog management link in my profile dropdown in the navbar. The blog management page is made to add new blogs or edit existing blogs easily and without opening the django admin page. This page has 'Blog name', 'Slug', 'Author', 'body', button to select the image or a space to add the image url. Status can be selected between *draft* or *publish*. Two buttons are given, one to cancel the action and another to add the blog. after adding blog detail page opens. When the admin select the edit action for the blog, the page opens with populated with the blog information in advance. Blog image is also visible. The blog image section is made using widgets of django which gives a very good user experience. The admin will have an option to cancel the action or update the blog.
+
+**Back to top button:**
+
+A back to top button is visible on product and bag pages when the user scrolls past 200 pixels.
+
+**Contact Page:**
+
+The contact page can be opened by clicking th contact us link on the footer. This page has a feedback form for the user to enter 'name', 'email', 'subject' and the 'message'. One button is given to send the message. The message directly goes to admin's email account.
+
+**Toasts:**
+
+All pages displays toast messages depending on the action taken. Toast messages are of 4 types, 'success', 'error', 'warning', and 'info'. The toast colour also changes according to the message. Toast is displayed at the top right of the page below the navbar. There is a button is the toast to go to secure checkout.
+
+**Delete Modal:**
+
+The delete modal is added as the safety of the site. The admin can delete the products and blogs but while doing that one delete modal pops up asking for the confirmation about the action. If the admin is sure to delte then he/she clicks the delete button or if not sute then click cancel and go back to open page.
 
 
 [Go back to Top](#table-of-content)
