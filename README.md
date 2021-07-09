@@ -355,6 +355,18 @@ All pages displays toast messages depending on the action taken. Toast messages 
 The delete modal is added as the safety of the site. The admin can delete the products and blogs but while doing that one delete modal pops up asking for the confirmation about the action. If the admin is sure to delte then he/she clicks the delete button or if not sute then click cancel and go back to open page.
 
 
+### **Features to be implementd in Future**
+
+There are pleant of features that can be added in the project in the future as django gives multiple opportunities and options. 
+
+1. Account login via social media
+ 
+ I wanted to add Gmail or facebook login in the project but due to some factors I could not do that. I would love to do that in the future after getting more knowledge in Django.
+
+2. Product Review
+
+ It would be great if the user get to know what other people think about a particular product. I would love to do that in the future.
+
 [Go back to Top](#table-of-content)
 ***
 
