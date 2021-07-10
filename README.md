@@ -15,12 +15,12 @@ This project is plugged into a **PostgreSQL** database, with **SQlite3** used in
 
 * [Overview](#overview)
 
-* [User Experience](#user-experience)
-    
-    * [User Goals](#user-goals)
-    * [Business Goals](#business-goals)
-    * [User Stories](#user-stories)
-    * [Business Stories](#business-stories)
+* [User Experience](#user-experience)</summary>
+
+   * [User Goals](#user-goals)
+   * [Business Goals](#business-goals)
+   * [User Stories](#user-stories)
+   * [Business Stories](#business-stories)
 
 * [Planes of Development](#planes-of-development)
     * [Strategy](#strategy)
@@ -178,6 +178,9 @@ The wireframe for this project has been made for Three screen sizes(Mobile View,
 screen sizes for a better understanding of the responsiveness of the page.
 
 The wireframes for this Project can be seen here.
+<details>
+<summary>Wireframe</summary>
+<br>
 
 1. [Home Page](docs/wireframes/HomePage.pdf)
 
@@ -204,6 +207,8 @@ The wireframes for this Project can be seen here.
 12. [Blog Details Page](docs/wireframes/BlogDetailsPage.pdf)
 
 13. [Product Management Page](docs/wireframes/ProductManagementPage.pdf)
+
+</details>
 
 #### **Sitemap**
 Sitemap is prepared for this site to understand the navigation of the pages.
@@ -256,6 +261,105 @@ Images used are taken from [Unsplash](https://unsplash.com/) and [Google](https:
 ***
 
 ## **Database Model**
+
+SQLite3 database is used during the development of the project. For deployment of the project PostgreSQL databse is used. 
+Using Django Allauth and it's default django.contrib.auth.models, provided me with the the User model used in the profile app.
+
+The structure of the Product and Checkout apps are guided by the Code Institute's walkthrough project, **Boutique Ado**.
+
+### **Profile App**
+**User Profile Model**
+
+| Name   | Database Key     | Field Type  |  Validation  |
+| ------------- |:----------:| :------:|  :-----:  |
+| User | user    | OneToOneField 'User' |  on_delete=models.CASCADE  |
+| Phone Number | default_phone_number    | models.CharField | max_length=20, null=True, blank=True   |
+| Street Address 1 | default_street_address1    | models.CharField |  max_length=80, null=True, blank=True  |
+| Street Address 2 | default_street_address2    | models.CharField |  max_length=80, null=True, blank=True  |
+| Town or City |  default_town_or_city    | models.CharField |  max_length=40, null=True, blank=True  |
+| County | default_county    | models.CharField |  max_length=80, null=True, blank=True  |
+| Postcode | default_postcode    | models.CharField |  max_length=20, null=True, blank=True  |
+| Country |  default_country   | models.CharField |  blank_label='Country', null=True, blank=True  |
+
+### **Product App**
+**Category Model**
+
+| Name   | Database Key     | Field Type  |  Validation  |
+| ------------- |:----------:| :------:|  :-----:  |
+| Name | name    | moels.CharField |  max_length=254  |
+| Friendly Name | friendly_name    | models.CharField | max_length=254, null=True, blank=True   |
+
+**Product Model**
+
+| Name   | Database Key     | Field Type  |  Validation  |
+| ------------- |:----------:| :------:|  :-----:  |
+|  Category | category    | models.ForeignKey |  'Category', null=True, blank=True, on_delete=models.SET_NULL  |
+| Sku | sku    | models.CharField | max_length=254, null=True, blank=True   |
+| Name |  name    | models.CharField |  max_length=254  |
+| Description |  description    | models.TextField |    |
+| Price | price    | models.DecimalField |  max_digits=6, decimal_places=2  |
+| Rating | rating    | models.DecimalField | max_digits=6, decimal_places=2, null=True, blank=True  |
+| Image URL | image_url    | models.URLField |  max_length=1024, null=True, blank=True  |
+| Image | image   | models.ImageField | null=True, blank=True  |
+
+### **Checkout App**
+**Order Model**
+
+| Name   | Database Key     | Field Type  |  Validation  |
+| ------------- |:----------:| :------:|  :-----:  |
+| Order Number | order_number    | models.CharField |  max_length=32, null=False, editable=False  |
+| User Profile | user_profile    | models.ForeignKey | UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders'   |
+| Full Name | full_name   | models.CharField |  max_length=50, null=False, blank=False  |
+| Email | email   | models.EmailField |  max_length=254, null=False, blank=False  |
+| Phone Number |  phone_number    | models.CharField |  max_length=20, null=False, blank=False  |
+| Country | country    | CountryField | blank_label='Country *', null=False, blank=False  |
+| Postcode | postcode    | models.CharField |  max_length=20, null=True, blank=True  |
+| Town or City |  town_or_city   | models.CharField |  max_length=40, null=False, blank=False  |
+| Street Address 1 | street_address1    | models.CharField |  max_length=80, null=False, blank=False  |
+| Street Address 2 | street_address2    | models.CharField |  max_length=80, null=True, blank=True  |
+| County | county    | models.CharField |  max_length=80, null=True, blank=True  |
+| Date | date    | models.DateTimeField |  auto_now_add=True  |
+| Delivery Cost |  delivery_cost   | models.DecimalField |  max_digits=6, decimal_places=2, null=False, default=0  |
+| Order Total |  order_total   | models.DecimalField |  max_digits=10, decimal_places=2, null=False, default=0  |
+| Grand Total |  grand_total   | models.DecimalField |  max_digits=10, decimal_places=2, null=False, default=0  |
+| Original Bag |  original_bag   | models.TextField |  null=False, blank=False, default=''  |
+| Stripe Payment Intent ID |  stripe_pid   | models.CharField |  max_length=254, null=False, blank=False, default=''  |
+
+
+**Order Line Item Model**
+
+| Name   | Database Key     | Field Type  |  Validation  |
+| ------------- |:----------:| :------:|  :-----:  |
+| Order  | order    | models.ForeignKey |  Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems'  |
+| Product |product    | models.ForeignKey | Product, null=False, blank=False, on_delete=models.CASCADE   |
+| Quantity | quantity   | models.IntegerField |  null=False, blank=False, default=0  |
+| Line Item Total | lineitem_total   | models.DecimalField | max_digits=6, decimal_places=2, null=False, blank=False, editable=False  |
+
+### **Blog App**
+**BlogPost Model**
+
+| Name   | Database Key     | Field Type  |  Validation  |
+| ------------- |:----------:| :------:|  :-----:  |
+| Title | title    | models.CharField |  max_length=254, unique=True  |
+| Date Created | created_on   | models.DateTimeField | auto_now_add=True   |
+| Date Updated | updated_on    | models.DateTimeField |  auto_now=true  |
+| Slug | slug    | models.SlugField |  max_length=254, unique=True  |
+| Author |  author    | models.ForeignKey |  User, on_delete=models.CASCADE, related_name='blog_posts'  |
+| Body | body    | models.TextField |   |
+| Image | image    | models.ImageField |  default='', blank=true  |
+| Image URL |  image_url   | models.URLField |  max_length=1024, default='', blank=True  |
+| Status |  status   | models.IntegerField |  choices=STATUS, default=0  |
+
+**Comment Model**
+
+| Name   | Database Key     | Field Type  |  Validation  |
+| ------------- |:----------:| :------:|  :-----:  |
+| Post | post    | models.ForeignKey |  BlogPost, on_delete=models.CASCADE, related_names='comments'  |
+| Name | name   | models.CharField |  max_length=80  |
+| Email | email    | models.EmailField |    |
+| Body | body    | models.TextField |    |
+| Date Created |  created_on    | models.DateTimeField |  auto_now_add=True  |
+| Active | active    | models.BooleanField |  default=False  |
 
 [Go back to Top](#table-of-content)
 ***
@@ -439,15 +543,27 @@ There are pleant of features that can be added in the project in the future as d
 
 * The biggest project barrier came on the day of deployment, On 1st july 2021 Gitpod had some incident which dleted all uncommited files from every workspace open during that time. My workspace was open as I was going to do deployment. The workspace stopped working and We got instructions from Gitpod.
 
-  ![image](docs/gitpod.JPG)
+  <details>
+  <summary>Gitpod Instruction</summary>
 
-I lost my SQL database after that incident, 
+  ![image](docs/gitpod.JPG)
+  </details>
+
+  I lost my SQL database after that incident, 
+
+  <details>
+  <summary>Command line output</summary>
 
   ![image](docs/db.JPG)
+  </details>
 
-Gitpod sent me .tar files which was very complicated to read and implement for me.
+  Gitpod sent me .tar files which was very complicated to read and implement for me.
+
+  <details>
+  <summary>TAR file</summary>
 
   ![image](docs/tar.JPG)
+  </details>
 
 So I install the requirements again, Did the migrations and uploaded Categories, Products and Blogs again.
 ### **Known Issues**
