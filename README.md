@@ -487,7 +487,7 @@ There are pleant of features that can be added in the project in the future as d
 
  * [Django](https://www.djangoproject.com/) is a Python Web Framework, which is used for development.
  * [AWS S3](https://aws.amazon.com/s3/) cloud storage for static and media files.
- * [VS Code](https://code.visualstudio.com/) main workspace IDE(integrated Development Environment).
+ * [Gitpod](https://gitpod.io/) main workspace IDE(integrated Development Environment).
  * [jQuery](https://jquery.com/) was used for the interactive features.
  * [Bootstrap](https://getbootstrap.com/) is used to make main structure and layout of the project.
  * [Google Fonts](https://fonts.google.com/) was used for the font 'Montserrat' for this project .
