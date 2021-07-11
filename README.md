@@ -573,7 +573,7 @@ So I install the requirements again by this command:
         python3 manage.py makemigrations
         python3 manage.py migrate
 
-        
+
 ### **Known Issues**
 
 [Go back to Top](#table-of-content)
@@ -746,9 +746,89 @@ Heroku can be connected to Github to automatically deploy each time you issue a 
 
  The code will now be automatically deployed with every git push. Upon a git push, you will see the build in progress in the 'Activity' tab on Heroku. You are now deployed to Heroku.
 
+### **Hosting Images on Amazon Web Service S3**
+
+The static and media files are hosted in as AWS S3 bucket for this project. We need to create an account with AWS, create a S3 bucket, giving it public access. The CORS configurations was provided by Code Institute, which is:
+
+        [
+          {
+              "AllowedHeaders": [
+                  "Authorization"
+              ],
+              "AllowedMethods": [
+                  "GET"
+              ],
+              "AllowedOrigins": [
+                  "*"
+              ],
+              "ExposeHeaders": []
+          }
+        ]
+
+The detail set up of S3 bucket can be found [here](https://docs.aws.amazon.com/s3/index.html)
+
+We need to set the static and media files in our workspace. For this, we need to do the following:
+
+1. Install 'boto3' and 'django-storages' and freeze them in requiremnets.txt
+
+        pip3 install boto3
+        pip3 install django-storages
+        pip3 freeze > requiremnets.txt
+
+2. In 'setting.py' add 'storages' under INSTALLED APPS. Then add these following settings to tell Django which bucket it should be communicating with:
+
+          STATIC_URL = '/static/'
+          STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
+          MEDIA_URL = '/media/'
+          MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+          if 'USE_AWS' in os.environ:
+             # Cache control
+             AWS_S3_OBJECT_PARAMETERS = {
+                'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+                'CacheControl': 'max-age=94608000',
+              }
+
+            # Bucket Config
+            AWS_STORAGE_BUCKET_NAME = 'superchef-ms4'
+            AWS_S3_REGION_NAME = 'eu-west-1'
+            AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+            AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+            AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+            # Static and Media files
+            STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+            STATICFILES_LOCATION = 'static'
+            DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+            MEDIAFILES_LOCATION = 'media'
+
+            # Override static and media URLs in production
+            STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+            MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
+After setting up the s3 bucket, We get a csv file downloaded. In this file we will find AWS access key and secret access key.
+
+3. Add these keys to Heroku config variables.
+
+4. Add a variable here with the key of 'USE_AWS' with a value of 'True'. This ensures that settings file knows to use the AWS configuration when deploying to Heroku.
+
+5. Delete the DISABLE_COLLECSTATIC variables from Heroku, so Django can collect static files automatically uploading them to the S3 bucket.
+
+6. Create a file called 'custom_storages.py'. This will contain the following:
+
+        from django.conf import settings
+        from storages.backends.s3boto3 import S3Boto3Storage
 
 
+        class StaticStorage(S3Boto3Storage):
+            location = settings.STATICFILES_LOCATION
 
+
+        class MediaStorage(S3Boto3Storage):
+            location = settings.MEDIAFILES_LOCATION
+
+7. Add and commit all these changes then issue a git push. This will trigger an automatic deployment to Heroku, and then all of this logic will be implemented, and static and meida files will be applied to the deployes site.
 
 [Go back to Top](#table-of-content)
 ***
