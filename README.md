@@ -56,9 +56,8 @@ This project is plugged into a **PostgreSQL** database, with **SQlite3** used in
 * [Testing](#testing)
 
 * [Deployment](#deployment)
-    * [Prerequisites](#prerequisites)
-    * [How to Clone SuperChef](#how-to-clone-superchef)
-    * [How to Deploy to Heroku](#how-to-deploy-to-heroku)
+    * [Local Deployment](#local-deployment)
+    * [Deployment to Heroku](#deployment-to-heroku)
 
 * [Credits](#credits)
     * [Code](#code)
@@ -573,10 +572,79 @@ So I install the requirements again, Did the migrations and uploaded Categories,
 
 ## **Testing**
 
+Testing steps and results can be found in [TESTING file](TESTING.md).
+
 [Go back to Top](#table-of-content)
 ***
 
 ## **Deployment**
+
+This E-Commerce project was developed in Gitpod and pushed to a remote repository on Github, using Git as version control. This project was deployed to Heroku, and AWS(Amazon Web Services and S3 Bucket) is used to store static and media files.
+
+### **Local Deployment**
+
+This project can be cloned or downloaded from Github by following these steps. First decide which IDE you want to use and then install these:
+
+ * Git - Fot version control
+ * PIP - to install packages
+ * Python - the programming language used in backend.
+
+These are many ways to clone a repository sugggested by Github. Download the entire repo as a zip file, and then upload that zip into a new workspace. Otherwise, on the repository page in Github, follow these steps:
+
+ 1. Click the 'Code' button.
+
+ 2. In this dropdown menu, click the clipboard icon to copy the URL.
+
+ 3. In the terminal window back in your IDE, make sure the current working directory is the location where you want to clone the repository.
+
+ 4. In the command line, paste in the URL retrieved from the repo using the command:
+
+        git clone <copied-repository-url-from-Step-2-^^>
+
+5. Create the environment variables, This can be created either in the Gitpod Settings by going to the Gitpod dashboard, go to Settings=> variables => and add the variables, or create a env.py and add the env.py in the .gitignore file in your projects root directory. These are the variables that should be included :
+
+        DEVELOPMENT = True
+        SECRET_KEY = YOUR_SECRET_KEY
+        STRIPE_PUBLIC_KEY = YOUR_STRIPE_PUBLIC_KEY
+        STRIPE_SECRET_KEY = YOUR_STRIPE_SECRET_KEY
+        STRIPE_WH_SECRET = YOUR_STRIPE_WH_SECRET
+
+ Sign up to Stripe to get the PUBLIC ans SECRET keys. This can be done by going on the Stripe, then on the left column of the page, click 'Developers'. and get API keys. Once you have set up the webhook endpoints, you will be given a unique STRIPE_WH_SECRET key.
+
+ more information on this can be found [here](https://stripe.com/docs)
+
+6. Install the required dependencies for the app to run, type this in command line:
+
+        pip3 install -r requirements.txt
+
+7. The project will now be set up and to make it run in the type this in comand line:
+
+        python3 manage.py runserver
+
+ To create superuser to access the admin backend:
+
+        python3 manage.py creatsuperuser
+
+ To access the admin backend add to the end of the site's URL:
+
+        https://<superchef-url>/admin
+
+This will allow to add, edit and delete products, categories, users, orders and verify any email addresses and comments on blogs.
+
+8. Models will need to be migrated in order to create them in the database. In the command line, type:
+
+    python3 manage.py makemigrations --dry-run
+
+    python3 manage.py makemigrations
+
+     ***FOLLOWED BY***
+
+    python3 manage.py migrate --plan
+
+    python3 manage.py migrate
+
+Whenever a model is edited it will need to be migrated. to make sure we are migrating the correct modls, we run a dry run flag before makemigrations and to make sure which models to be migrated, we run plan flag with migrate beforehand.
+
 
 [Go back to Top](#table-of-content)
 ***
