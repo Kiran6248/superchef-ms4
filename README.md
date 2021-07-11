@@ -564,7 +564,16 @@ There are pleant of features that can be added in the project in the future as d
   ![image](docs/tar.JPG)
   </details>
 
-So I install the requirements again, Did the migrations and uploaded Categories, Products and Blogs again.
+So I install the requirements again by this command:
+
+        pip3 install -r requirements.txt
+
+ Did the migrations and uploaded Categories, Products and Blogs again.
+
+        python3 manage.py makemigrations
+        python3 manage.py migrate
+
+        
 ### **Known Issues**
 
 [Go back to Top](#table-of-content)
@@ -585,7 +594,7 @@ This E-Commerce project was developed in Gitpod and pushed to a remote repositor
 
 This project can be cloned or downloaded from Github by following these steps. First decide which IDE you want to use and then install these:
 
- * Git - Fot version control
+ * Git - For version control
  * PIP - to install packages
  * Python - the programming language used in backend.
 
@@ -633,17 +642,112 @@ This will allow to add, edit and delete products, categories, users, orders and 
 
 8. Models will need to be migrated in order to create them in the database. In the command line, type:
 
-    python3 manage.py makemigrations --dry-run
+        python3 manage.py makemigrations --dry-run
 
-    python3 manage.py makemigrations
+        python3 manage.py makemigrations
 
-     ***FOLLOWED BY***
+        ***FOLLOWED BY***
 
-    python3 manage.py migrate --plan
+        python3 manage.py migrate --plan
 
-    python3 manage.py migrate
+        python3 manage.py migrate
 
 Whenever a model is edited it will need to be migrated. to make sure we are migrating the correct modls, we run a dry run flag before makemigrations and to make sure which models to be migrated, we run plan flag with migrate beforehand.
+
+### **Deployment to Heroku**
+
+Deploying this site to Heroku-
+
+1. Sign up or Login to Heroku app. After signing in, click 'New'. found at the top right of the dashboard, an then 'Create new app'.
+
+2. Give a app a unique name ans set the region colsest to your location, then click 'Create app'.
+
+3. Once created, click on the 'Resource' tab and in the add ons search bar, type postgres, and click 'Heroku Postgres' and then use the free plan. and confirm. This will provide a new Postgres database.
+
+4. There are spme extra dependencies and files that needed to be installed:
+
+  * psycopg2-binary - a PostgresSQL database adapter for the python programming language.
+  * dj_database_url - a Django utility which allows you to utilise 12factor inspired DATABASE_URL environment variables to configure the Django application.
+
+We also need to install *gunicorn* - a Python Web Server Gateway Interface(WSGI) HTTP sever, which will act as tge web server.
+
+5. After installing the dependencies, run the command:
+
+        pip3 freeze > requirements.txt
+
+ This will ensure that Heroku installs all our apps requirements when we deploy.
+
+6. Postgres is used for deployment and to transfer the files, we have to re-createa database maually. To do this we have to follow these steps:
+
+ * Make sure you are connected to your mysql database.
+
+ * Backup your current database and load it into a db.json file by typing in the command line:
+
+        python3 manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.json
+
+7. Now to set up the new database, Go tot the project's 'settings.py' and import dj_database_url at the top.
+
+8. Scroll down to database setting and comment out the default configuration, replacing it with a call to dj_database_url.parse and give it the database URL from Heroku:
+
+          DATABASES = {
+                  'default': dj_database_url.parse("<YOUR_Postrgres_database_URL>")
+              }
+
+This can be found from the settings tab on Heroku, by clicking 'Reveal config vars' and copying the value there from the DATABASE_URL key. It will start with 'postgres://'. You can also get this from typing in the command line:
+
+        heroku config
+
+Note: This is a temporary set up and should not be pushed to the Github for security reasons.
+
+Now your manage.py is connected to the nre postgres database. We have to run the migrations again as this is a new databse.
+
+9. After this, load your product data from the db.json file into Postgres using:
+
+        python3 manage.py loaddata db.json
+
+10. Next, we have to create a superuser to use on the postgres database:
+
+        python3 manage.py createsuperuser
+
+11. In 'settings.py' we have to create an if statement so when the Heroku app is running, you connect to the Postgres database. otherwise you connect to the development database. Replace the database setting with this code:
+
+        if 'DATABASE_URL' in os.environ:
+            DATABASES = {
+                'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+            }
+        else:
+            DATABASES = {
+                'default': {
+                    'ENGINE': 'django.db.backends.sqlite3',
+                    'NAME': BASE_DIR / 'db.sqlite3',
+                }
+            }
+
+12. Create a procfile, to tell Heroku how to run this project. Inside this file, add:
+
+        web: gunicorn cooks_finest.wsgi:application
+
+13. Login to Heroku on the command line, using:
+
+        heroku login -i
+
+14. Disable collectstatic sp heroku won't try to collect static files when we deploy. If you have more than on app then dont forget --app flag in the command:
+
+        heroku config:set DISABLE_COLLECTSTATIC=1 --app superchef-ms4
+
+15. Add the hostname of your Heroku app to allowed hosts in 'settings.py'.
+
+Heroku can be connected to Github to automatically deploy each time you issue a git push in the command line. The easiest way to enable this is :
+
+ 1. Open Heroku and navigate to the 'deploy' tab. 
+ 2. Under 'Deployment Method' select 'Connect to github'.
+ 3. Search for your repository anme and collect connect.
+ 4. Then scroll down and click 'Enable Automatic Deploys'.
+
+ The code will now be automatically deployed with every git push. Upon a git push, you will see the build in progress in the 'Activity' tab on Heroku. You are now deployed to Heroku.
+
+
+
 
 
 [Go back to Top](#table-of-content)
