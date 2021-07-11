@@ -835,6 +835,34 @@ After setting up the s3 bucket, We get a csv file downloaded. In this file we wi
 
 ## **Credits**
 
+### **Code**
+
+ 1. [Bootstrap](https://getbootstrap.com/) is used for the project layout and to make the site responsive and codes for Navbar, Delete Modal are referred from there.
+
+ 2. **Boutique Ado** project from Code institute was referred through out the project for the project setup and making use of allauth template logic. 
+
+ 3. My own Two models for the **Blog** app, *blogpost* and *comments* are referred from Django Central's [Building a blog application](https://djangocentral.com/building-a-blog-application-with-django/) and [Creating Comments system with Django](https://djangocentral.com/creating-comments-system-with-django/)
+
+ 4. Youtube channel [Code with Harry](https://www.youtube.com/watch?v=5BDgKJFZMl8&list=PLu0W_9lII9ah7DDtYtflgwMwpT3xmjXY9) for better understanging of Django.
+
+### **Media**
+
+ 1. [Google Images](https://www.google.com/) is used to get product images and [Amazon.uk](https://www.amazon.co.uk/) is used to refer product descriptions.
+
+ 2. [Unsplash](https://unsplash.com/) is used to get images on the Home page.
+
+### **Acknowledgments**
+
+ 1. My mentor **Can Sucullu** for his guidance and advice.
+
+ 2. Code Institute **Slack Community** of solving every small issues.
+
+ 3. Code Institute's Tutors **John** and **Alan** of their support and guidance when I lost my workspace and database during Gitpod Incident on 1st July 2021.
+
+ 4. My Family for supporting and understanging me in this long project.
+
+ 5. My friend from Code Institute [Mihaela Sandrea](https://github.com/mihaelasandrea) for support and helping me in debugging, whenever I got an issue.
+
 [Go back to Top](#table-of-content)
 ***
 
