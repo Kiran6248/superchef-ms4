@@ -250,14 +250,66 @@ Testing User stories from UX part of [README.md](README.md)
 ### **Elements on every page**
 #### **Navigation Bar**
 
+1. Click the logo and check the page stays on Home page.
+2. Type something in search box and check if the search functionality works fine.
+3. Check if the search result shows the correct product and product quantity.
+4. Click on My account dropdown and check Register and Login links shows. 
+5. Login to the site from a user account and see My profile and logout links are also visible in the dropdown.
+6. Login from a superuser account and check if the product management and Blog management links also added in the my account dropdown.
+7. Click on Bag icon on the Topnav and check Shopping bag page opens.
+8. In the Main nav Check the dropdown shows all the categories in respective dropdowns.
+9. Click on the category and check if it takes to the correct product category list.
+10. Check the banner diaplays the correct amount of the discount threshold.
+11. Go to mobile view and check Search bax changes to search icon, and main nav changes to collapsible navbar on left.
+12. Click the search icon and check the search box opens. 
+13. Repeat steps 3-7 for the mobile view.
+14. Click Collapsed navbar and check all category links shows.
+15. Click Home link in collapsed navbar and check it opens the home page.
+
 #### **Footer**
 
+1. Check the footer is a sticky footer and always stays at the bottom.
+2. Check the copyright name displays correct name.
+3. Click the social account links and check it opens the respective pages in different window.
+4. Click Contact Us link and check it opens Contact us page.
+5. Repeat steps 1-4 for mobile view.
+
 #### **Toasts**
+
+1. Login to the site with a correct user name and check success message appears on the right side of the page.
+2. Try to Edit some product and check Alert message appears. 
 
 ### **Elements on separate pages**
 
 ### **Home Page**
 #### **Carousel**
+
+1. Check the carousel displays 3 images and sliding at a perfect time interval.
+2. Check all the slides displays different cover texts.
+3. Click on the buttons on the slides and check if it opens the correct realted page.
+4. Repeat steps 1-3 for mobile view.
+
+#### **Blog Card**
+
+1. Check the blog card displays a correct image on Home page.
+2. Click on the button on the card and check if it opens the Blog Page.
+3. Check the blog card takes full page width in mobile view.
+4. Repeat steps 1-2 for mobile view.
+
+#### **Shop Now Card**
+
+1. Check the Shop card displays a image of a kitchen.
+2. Click on the button on the card and check if it opens the product page.
+3. Check the Shop now card takes full page width in mobile view.
+4. Repeat steps 1-2 for mobile view.
+
+#### **New Arrival Section**
+
+1. Check the section displays New arrival category.
+2. Click the see all link and check it opens the new arrival category.
+3. Click on the product image and check it opens the product in product detail page.
+4. Check the product card takes full width in mobile view.
+5. Repeat steps 1-3 for mobile view.
 
 [Go to Top](#testing)
 ***
