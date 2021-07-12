@@ -14,7 +14,7 @@
     * [Javascript](#javascript)
     * [Python](#python)
 
-* [Client Stories Testing](#client-stories-testing)
+* [User Stories Testing](#user-stories-testing)
 
 * [Manual Testing](#manual-testing)
 
@@ -45,3 +45,246 @@
 
 * [Lighthouse](#lighthouse)
 
+***
+
+## **Code Testing**
+  [W3C Markup Validation Service](https://validator.w3.org/)
+
+### **Markup**
+ [W3C Markup Validation Service](https://validator.w3.org/)
+
+ * W3C markup validation service is used for the testing of the **HTML** of all  HTML pages and 
+
+    The  result was this.
+
+    ![image]()
+
+### **CSS**
+[W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+
+* W3 CSS validation service is used for the testing of the **CSS** of the project and .
+
+    The result can be seen here.
+
+### **Javascript**
+[JSHint](https://jshint.com/)
+
+* JSHint, a JavaScript code quality tool was used to test the **JavaScript** codes of all 2 js pages from the project.
+
+    The result can be seen here.
+
+* ![script.js]() 
+ 
+### **Python**
+[Python Validator](http://pep8online.com/)
+
+ The result can be seen here.
+
+ ![python]()
+
+[Go to Top](#testing)
+***
+
+## **User Stories Testing**
+
+Testing User stories from UX part of [README.md](README.md) 
+
+**Viewing and Navigation** 
+
+1. Immediately get an overview of what products this site offers.
+    * This site has a main nav for desktop which is collapsible in mobile view. This main nav has links to all the product categories. 
+    * The products are sorted in many ways. For example, price, rating and category.
+    * Other than this product are displayed based on deals, special offers and clearance.
+    * So, it is very easy to find what products are available if the site.
+
+2. View a list of products.
+    * When the user clickes the certain category from main nav, the product page opens with that category. 
+    * It also shows number of products available at the left hand side of the page.
+
+3. View details about a specific product.
+    * When a user chooses a product and clicks on the image of the product in the product page, It opens a product detail page. 
+    * The product detail page has a large image of the product, Name, description, Category and rating is also there.
+    * A quantity selector box is also given, so that user can select more than one product if he/she wants.
+
+4. See total of all items in my shopping bag.
+    * The Shopping bag page shows every detail related to the price of the product. 
+    * It shows bag total, delivery cost (if Bag total is less than teh threshold amount, in this project it is $50), and Grand Total.
+    * One bag icon is given on the top right corner of the navbar, which shows the bag total, which makes it very convenient for the user to see the total irrespective of in what page he/she is.
+
+5. See the rating of every product.
+    * Rating of every product is given ate the product page, where every product is displayed. 
+    * Rating is shown in number out of 5. For example 4.5/5 .
+    * Product rating is also given on the product detail page, where individual product is displayed.
+
+6. View the blog about the site.
+    * This site has a very nice blog section, which can be visited by the blog card given on the Home page.
+    * This blog section opens every blog in a detailed view when clicked. 
+    * The detailed Card displayes the Full blog content, as well as the name of the author and the date and time of it posting.
+    * So that the user will get to know if it is recent or old post.
+
+7. Add comments on the blog.
+    * The blog detail page has a comments section also, which displayes the comments added by the user.
+    * One form is given, which takes User name, email, and the comment about the blog.
+    * The comments added by the user does not reflect on the page immediately. Admin has to approve it for displaying.
+    * This featture is added for the safety from spam messages.
+
+ **Registration and User accounts**
+
+8. Easily register for an account.
+    * Registering for the account is very easy. The register link is given in the dropdown of my account in the top navbar.
+    * After clicking the register, the Register page opens, which asks the user to enter Username, Email and password.
+    * After filling out the form the user gets and email on his/her email account to verufy the email account.
+    * After Verification Login page opens. And after filling that the user can log in easily.
+  
+9. Easily Login or Logout.
+    * Login link is given at the my profile dropdown in the top navbar.
+    * User is asked to enter username and password, which he has used while registering.
+    * After correct entry the user can easily log in.
+    * If the user is not registered already then he is asked to sign up first before login.
+    * When the user is logged in, the logout options displayes in the my account dropdown. Which asks about the confirmation if the user really want to signout.
+    * When the user click sign out button, he can easily sign out from the site.
+
+10. Easily recover my password in case i forget it.
+    * Very nice password reset feature is added from the Django allauth.
+    * Which opens when the user clicks forgot password in the login page.
+    * Forgot password page asks for the email address and send a password recovery email to the user account.
+
+11. Receive a confirmation email after registering an account.
+    * When the user registers with the site, he/she gets a confirmation email in the email account provided by the user.
+
+12. Have a personalised user profile.
+    * Every registered user has a profile page.
+    * The profile page can be visited from the link My profile in the my account dropdown in the navbar.
+    * This page shown the default  delivery address and Order history of the user.
+
+ **Sorting and Searching** 
+
+13. Select which category of product to show.
+    * The categories of the products is displayed in the main nav and can be selected easily.
+    * The category of individual product is also shown with the product name and detail.
+
+14. Sort products by different parameters.
+    * Nice sorting functionality is given on the products page.
+    * Which is a dropdown and sorts the product based on Price(low to high), price(High to low), Rating(low to high), Rating(high to low), Name(A-Z), Name(Z-A),
+    Category(A-Z), Category(Z-A).
+
+15. Search for the product by name or description.
+    * A search box is provided at the top bar which searches the product by name or description.
+    * In mobile view only Search symbol is visible and it shows search box after clicking on it.
+
+16. Easily see what I have searched for and the number of results.
+    * The search functionality displays the products based on the search.
+    * The number of products comes under that search is also shown in the top left side of the page.
+
+**Purchasing and Checkout**
+
+17. Easily select the number of product when adding it to my shopping bag.
+    * A quantity selector box is given on the product detail page.
+    * Where quantity is increased or decreased by selecting + or - button. The quantity can be selected by writing the number directly in the box.
+    * Quantity can update in shopping bag also by the update button provided.
+
+18. Easily view all items in my shopping bag.
+   * The shopping bag displays the list of each item in the shopping bag and its price.
+   * At the bottom of the shopping bag the Bag total of all product is shown with delivery cost and Grand total after applying the delivery cost.
+   * The shopping bag displays name description and a small image of the product also, So there is a very little chance that wrong product will be added by mistake.
+
+19. Change the quantity of a product in my shopping bag.
+    * In the shopping bag, one update and remove button is given below the quantity selector box.
+    * The update button updates the quantity after changing it in the quantity selector box. 
+    * The remove button removes the product from the shopping bag.
+
+20. Easily enter my payment information.
+    * After shopping bag the shopper can go to checkout page byt the button provided in the bottom.
+    * The checkout page take the delivery information of the user and order summary also.
+    * If the user is logged in then his/her default delivery information will be previousely filled.
+    * After giving card detail and clicking complete order, the shopper can checkout easily.
+
+21. Know that my personal and payment information is secure.
+    * After completing order the page refreshes and the card number is not visible anymore. 
+    * If the user leaves the site without logging out then also his/her payment detail is not visible.
+
+22. To know if the payment is done successfully or failed.
+    * After completing the order checkout success pages opens which displays the order and delivery details. 
+    * The user gets one email also stating the details of the purchase. 
+    * One toast message also shows the success and says that email is sent to user account.
+    * If there is any problem with the payment htne the form will display the correct information about that.
+
+23. View an order confirmation after checkout.
+    * The checkout success page displays the order detail, user can check can confirm if there is any mistake.
+
+24. Receive a confirmation email after ordering.
+    * User gets one confirmation email after purchasing with all the purchasing details.
+    * The email will displays the billing and delivery address also.
+
+25. Have my address and billing information prefilled on the checkout page.
+    * If the user is already registered and logged in then the Checkout page displays the prefilled delivery address.
+    * This makes checkout easy.
+
+**Admin and Store Management**
+
+26. Add a product to the site.
+    * A product management link is given in the my account dropdown, which is visible only to the superuser.
+    * The product management link opens Add product form which has boxes for product name, sku, description, price, rating, and product image or product url.
+
+27. Edit/ Update a product.
+    * The product management page opens edit product page when the superuser clicks Edit button on the product page for a product.
+    * The edit page is prefilled with the product detail and a very nice small image is also displayed, for better decision making.
+
+28. Delete a product.
+    * The delete link is given with every product which is visible to the superuser only.
+    * The delete modal pops up after clicking the delete button for the confirmation of the action.
+
+29. Add, Update and Delete blog posts.
+    * Similar to product management, one blog management link is also given in the my accout dropdown.
+    * This links open add blog form with blog name, slug, author, body, and publish or draft selection.
+    * The superuser can easily edit the blog by clicking the edit link on the blogs and opening the edit form.
+    * The superuser can delete the blog by clicking the delete link and confirming in delete modal.
+
+[Go to Top](#testing)
+***
+
+## **Manual Testing**
+
+**Manual Testing of all elements and functionality of every page.**
+
+### **Elements on every page**
+#### **Navigation Bar**
+
+#### **Footer**
+
+#### **Toasts**
+
+### **Elements on separate pages**
+
+### **Home Page**
+#### **Carousel**
+
+[Go to Top](#testing)
+***
+
+## **Responsiveness**
+
+[Go to Top](#testing)
+***
+
+## **Browser Compatibility**
+
+### **Desktop / Laptop**
+
+  **Google Chrome** 
+
+### **Tablet**
+
+ **Safari** 
+
+### **Mobile**
+
+ **Google Chrome** 
+
+ [Go to Top](#testing)
+***
+
+## **Lighthouse**
+
+[Go to Top](#testing)
+***
