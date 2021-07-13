@@ -470,6 +470,10 @@ Testing User stories from UX part of [README.md](README.md)
 
 ## **Responsiveness**
 
+* DevTools- Devices tested across a range of widths: iPhone5(320px)| Samsung S5(360px)| iPhone6/7/8/X(375px)| iPhone6/7/8 Plus(414px)| iPad(768px)| iPad Pro(1020px)| Laptop(1200px)| Large Desktop Screen(1920px)
+ * Viewed site on above range on various browsers: Google Chrome, Firefox, Opera, Safari.
+ * Viewed on physical devices: small phone(320px)| Large phone(414px)| large tablet(768px)| medium, laptop(1366px)| Large Desktop Screen(1920px)
+
 [Go to Top](#testing)
 ***
 
@@ -477,15 +481,25 @@ Testing User stories from UX part of [README.md](README.md)
 
 ### **Desktop / Laptop**
 
-  **Google Chrome** 
+  **Google Chrome** - All tested and working correctly.
+
+ **Microsoft Edge** - All tested and working correctly.
+
+ **Mozilla Firefox** - All tested and working correctly.
+
+ **Safari** - All tested and working correctly.
 
 ### **Tablet**
 
- **Safari** 
+  **Safari** - All tested and working correctly.
 
 ### **Mobile**
 
- **Google Chrome** 
+ **Google Chrome** - All tested and working correctly.
+
+ **Safari** - All tested and working correctly.
+
+ **Samsung Internet** - All tested and working correctly.
 
  [Go to Top](#testing)
 ***
