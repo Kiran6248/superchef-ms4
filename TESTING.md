@@ -404,17 +404,66 @@ Testing User stories from UX part of [README.md](README.md)
 
 1. Go to order history page by clicking individual order number in the My profile page. 
 2. Check it shows correct information about the user's profile.
-3.  Click Back to Profile button in the bottom and check it takes to MY profile page.
+3. Click Back to Profile button in the bottom and check it takes to MY profile page.
 4. Repeat steps 1-3 for mobile view.
 
 ### **Blog Page**
 
-1. 
+1. Go to the Blog page by clicking Blog card on the home page.
+2. Check the blogs are displayed in row with blog image in left and Blog name, Author name, Date and time of posting is there in right side.
+3. Click the blog image and check the individual blog detail page opens.
+4. Click on Blog Title and check Blog detail page opens.
+5. Click on the Read More button on the blog card and check the new blog detail page opens.
+6. Login froma superuser account and check Edit and delete button are visible.
+7. Click the edit button ans see the blog management page should open.
+8. Click the delete button and delete modal should pop up.
+9. Repeat steps 3-8 in mobile view.
+
 ### **Blog Detail Page**
+
+1. Click the Blog image or Title or Read More button on Blog page and reach Blog detail page.
+2. Check the blog image takes full page and check any spelling error in Blog Body.
+3. Login from a superuser account and check the edit and delete button are visible and working accordingly.
+4. Click the Back to Blogs and Check that it takes to the Main Blog page.
+5. Check the comments section that it displays the comments with the name of the user who posted it and date and time of its posting.
+6. Check the comment form by typing Name, Email and some comments and click Submit.
+7. Check the message "Your comment is awaiting moderation" displays and comment form disappears.
+8. Go to comments section through Django admin and approve or delete that comment.
+9. Repeat these steps for mobile view.
+
 ### **Blog Management Page**
+
+1. Go to Blog management page from the dropdown in My account in Navbar.
+2. Check the Add a blog form opens with section of Title, Slug, Author and Body. One box is there to add Image URL or select image button to add image.
+3. Check the status is Draft or Publish. 
+4. Fill the form with some information and press cancel the Blog page will open.
+5. Fill the form and press Add Blog , A new blog will be added with a success message.
+6. Repeat these steps in Mobile view.
+7. Click the edit link in the blog and check the Edit a blog page opens with the form section already filled with the selected blog details.
+8. Make some changes and click Edit the blog, Blog should be edited with a success message and blog detail should open.
+9. Repeat these steps for mobile view.
+
 ### **Back to Top**
+
+1. Go to product and shopping bag page and check Back to top button is there.
+2. Go down in the page and click on the button, The page should go on top.
+3. Repeat in Mobile view.
+
 ### **Contact Page**
+
+1. Open the contact form from the link in the Footer "Contact Us".
+2. Check the form displays full name, Email address, Subject and Message section and a Send Message button.
+3. Fill the form with some incorrect email format and the form validation should work.
+4. Click send message and a success message should show "Thank you for contacting Superchef. we will respond to you as soon as possible."
+5. Repeat these steps in mobile view.
+
 ### **Delete Modal**
+
+1. Check the delete modal by clicking delete link on product or blog.
+2. The delete Modal should pop up with a message of asking for confirmation for that particular product or blog.
+3. Click cancel and go back to the previous page.
+4. Click delete and the product or blog gets deleted with a success message.
+5. Repeat these steps in mobile view.
 
 [Go to Top](#testing)
 ***
