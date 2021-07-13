@@ -57,7 +57,13 @@
 
     The  result was this.
 
-    ![image]()
+    ![image](docs/htmltest.JPG)
+
+    So, I removed the unwanted DOCTYPE from the html pages and added one ul in the mobile nav page. Then the result came like this.
+
+    ![image](docs/htmltest2.JPG)
+
+    For this project nav link is divided in two parts, first main nav for desktop view and second for mobile view. Both use same parameters, so this user-options id can be overlooked for now. Other error related to javascript script type can also be overlooked.
 
 ### **CSS**
 [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
@@ -79,8 +85,15 @@
 * JSHint, a JavaScript code quality tool was used to test the **JavaScript** codes of all 2 js pages from the project.
 
     The result can be seen here.
+* Stripe_elements.js
 
-* ![script.js]() 
+* ![script.js](docs/stripe_element_test.JPG) 
+
+* Countryfield.js
+
+* ![image](docs/countryfieldtest.JPG)
+
+These warnings can be overlooked.
  
 ### **Python**
 [Python Validator](http://pep8online.com/)
