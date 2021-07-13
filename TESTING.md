@@ -311,6 +311,111 @@ Testing User stories from UX part of [README.md](README.md)
 4. Check the product card takes full width in mobile view.
 5. Repeat steps 1-3 for mobile view.
 
+### **Product Page**
+
+1. Click all product link and check product page opens.
+2. Click every category link in main anv and check respective product page opens.
+3. Check product card  is displaying correctly with 4 card in a row in large screen, 3 in medium, 2 in tablet and 1 in mobile view.
+4. Check the product image, name, price, category, and rating is displayed with every product cared.
+5. Click on the product image and check the product detail page opens.
+6. Click on the category of the product and check that category products page opens.
+7. Login from a superuser account and check the edit and delete button works.
+8. Count the products and check it is displayed in the top left with correct number.
+9. Click on the sort box in the right and check dropdown box displays.
+10. Click on each sorting and check the relevant page opens.
+11. Check in mobile view that repeat steps 4-11.
+
+### **Product Detail Page**
+
+1. Check the image is displayed in left and details in left side.
+2. Click on the image and check it opens in a new page with full screen view of the product image.
+3. Check the Name, Price and rating are displayed correctly on the product detail page.
+4. Click on the category icon and check it opens the particular category page.
+5. Check the product description for any spelling error.
+6. Check the quantity selector that the default value is 1 selected. 
+7. Click + button on it and check the quantity increases and does not go beyond 99. 
+8. Click - buttona and check quantity decreases and does not go below 1.
+9. Click in the box and add number and check it takes numbers between 1-99.
+10. Click the keep shopping button and check it opens the product page.
+11. Click the add to bag button and check it opens a success alert with Go to secure checkout link.
+12. Check in mobile view the image takes full page size and detail and description comes under that.
+13. Repeat steps 2-11 in mobile view.
+
+### **Product Management Page**
+
+1. Open the product management page by login from the superuser account and clicking product management from dropdown in my account in the navbar.
+2. Check Add a product page opens.
+3. Click on the category dropdown and check it shows all the categories used for this project.
+4. Click in the sku box and check it allows to enter any number.
+5. Enter some data in name, description, price and rating and click add product in the bottom. check it allows to add the product with a success toast message.
+6. Select some image and check it displays the image selected name beside the button.
+7. Click the cancel button and check it opens the product page. 
+8. click the add product button and check a product is added and product detail page opens.
+9. Go to mobile view and repeat steps 1-8.
+
+### **Profile Page**
+
+1. Login to the site and click My profile link in my account dropdown, check my profile page opens.
+2. Check the default delivery page is already filled with the phone number, address, country with the already entered user details. 
+3. change some information and click Update information button in the bottom, chech the profile gets updated with a success message.
+4. Check the order history in the right side.
+5. Check it displays Order number, Date, Items, and Order total of the purchase done in past.
+6. Click on the Order number and check it opens the order history page with thank you message and one alert message that it is a past confirmation.
+7. Go to the mobile view and repeat steps 1-6.
+
+### **Shopping Bag Page**
+
+1. Go to the shopping bag page by clicking the bag icon on the top right in the navbar.
+2. Check the Shopping bag page displays product image, name ans sku, price, quantity selector box, Subtotal.
+3. Check the quantity selector box by increasing the quantity and selecting update button below that.
+4. Click the remove link below the quantity selector box and check the product is removed from the the shopping bag.
+5. Check the Bag total is showing correct amount in the bag.
+6. Check the delivery amount, It should be 10% of the bag total and If bag total is more than $50 then it should be 0.
+7. Check the display message after Grand total stating how much more to spend to get $50 in bag total.
+8. Check the Grand Total, It should be addition of Bag total and delivery.
+9. Click Keep Shopping button and check it takes to the product page. 
+10. Click the Secure Checkout and check it opens The checkout page.
+11. Go to mobile view and repeat steps 1-10.
+
+### **Checkout Page**
+
+1. Go to checkout page by clicking Secure Checkout on the shopping bag page.
+2. Check a Form opens with detail box of Full Name and email address. 
+3. Check the delivery section has boxes for phone number, street address1, street address2, Town or city, County state or locality, Postal Code and Country dropdown.
+4. Enter some details and Enter card number in the payment section of the form.
+5. The test card number given by stripe is 4242 4242 4242 4242, expiry date is 04/24, CVC is 242 and ZIP is 42424.
+6. Check the small red message in bottom stating about how much will be charged from the card.
+6. Click the Adjust bag button and it should open the shopping bag page.
+7. Click Complete Order button after filling out some test details and checkout success page should open after a full page spinner and Success confirmation.
+8. Enter some different card detail and check the message in red that the card number is invalid.
+9. Check the order summary displayd in the right that it shows correct number of products in the Bag.
+10. Check it shows correct product iamge, name, subtotal of the product. Order total, delivery and Grand Total of the Shopping bag.
+11. Go to mobile view and repeat steps 1-10.
+
+### **Checkout Success Page**
+
+1. Go to Checkout success page by clicking Complete order button on checkout page.
+2. Check the message on the top with the user's email id .
+3. Check the order info, Order detail, Delivering To address and Billing info.
+4. Click the Now Checkout The latest deals button and check Special offer category page opens.
+5. Go to mobile view and repeat steps 1-4.
+
+### **Order History**
+
+1. Go to order history page by clicking individual order number in the My profile page. 
+2. Check it shows correct information about the user's profile.
+3.  Click Back to Profile button in the bottom and check it takes to MY profile page.
+4. Repeat steps 1-3 for mobile view.
+
+### **Blog Page**
+
+1. 
+### **Blog Detail Page**
+### **Blog Management Page**
+### **Back to Top**
+### **Contact Page**
+### **Delete Modal**
+
 [Go to Top](#testing)
 ***
 
