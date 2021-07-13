@@ -260,11 +260,12 @@ Testing User stories from UX part of [README.md](README.md)
 8. In the Main nav Check the dropdown shows all the categories in respective dropdowns.
 9. Click on the category and check if it takes to the correct product category list.
 10. Check the banner diaplays the correct amount of the discount threshold.
-11. Go to mobile view and check Search bax changes to search icon, and main nav changes to collapsible navbar on left.
-12. Click the search icon and check the search box opens. 
-13. Repeat steps 3-7 for the mobile view.
-14. Click Collapsed navbar and check all category links shows.
-15. Click Home link in collapsed navbar and check it opens the home page.
+11. Click the Blog icon and check it opens the blog page.
+12. Go to mobile view and check Search bax changes to search icon, and main nav changes to collapsible navbar on left.
+13. Click the search icon and check the search box opens. 
+14. Repeat steps 3-7 for the mobile view.
+15. Click Collapsed navbar and check all category links shows.
+16. Click Home link in collapsed navbar and check it opens the home page.
 
 #### **Footer**
 
@@ -409,7 +410,7 @@ Testing User stories from UX part of [README.md](README.md)
 
 ### **Blog Page**
 
-1. Go to the Blog page by clicking Blog card on the home page.
+1. Go to the Blog page by clicking Blog card on the home page or blog icon in the top nav.
 2. Check the blogs are displayed in row with blog image in left and Blog name, Author name, Date and time of posting is there in right side.
 3. Click the blog image and check the individual blog detail page opens.
 4. Click on Blog Title and check Blog detail page opens.

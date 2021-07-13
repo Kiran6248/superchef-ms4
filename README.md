@@ -369,7 +369,7 @@ The structure of the Product and Checkout apps are guided by the Code Institute'
 ### **Features Used**
 **Navigation Bar:**
 
-All pages of the project have a fixed top navigation bar which has a search box, Site logo, and 2 icons, One is for *my Account* and another is *bag* icon.
+All pages of the project have a fixed top navigation bar which has a search box, Site logo, and 3 icons, One is for *my Account* second is for *Blog* and another is *bag* icon.
 The search box can be use to search by keywords of the product name or description. The My account icon is a dropdown list, which shows login and register links for the first time users. If the user has registered and logged in then then it will show a link to *my profile* and *logout* page. If the user is a superuser/admin then links to *Product management* and *Blog Management* are also visible. The bag icon takes us to *shopping Bag* page after clicking on it and it also displays the total amount of the products already in the bag. This section is fully responsive and in the mobile view the search box is replaced by only the icon of the search and search box appears after clicking on it. 
 The navigation bar consiste of one **Main Nav** also, which is a list of all the categories of the products used in the project. These list have links based on price and rating of the product also. This section changes to a collapsible hamburger menu on the left side of the screen for the smaller screen view. 
 There is one delivery banner also which displays the message about the free delivery threshold for the project.
@@ -428,7 +428,7 @@ This page can be viewed by clicking *Complete Order* button on the checkout page
 
 **Blog Page:**
 
-Blog is created to view by every user. It can be accessed by any user by clicking the blog link on home page. The blog page shows rows of all the blogs. Every row have one blog image, Name of the blog, Name of the person who added the blog, Date and time of blog added, And first 150 characters of the blog details. There is a *read more* button the open the blog in the different page for a full view. The image of the blog will also open the blog in the detail view. There is one edit and delete link, only visible to the superuser. In mobile view the blog image will take the full width and blog name and other details will come below the blog.
+Blog is created to view by every user. It can be accessed by any user by clicking the blog link on home page or blog icon in top nav. The blog page shows rows of all the blogs. Every row have one blog image, Name of the blog, Name of the person who added the blog, Date and time of blog added, And first 150 characters of the blog details. There is a *read more* button the open the blog in the different page for a full view. The image of the blog will also open the blog in the detail view. There is one edit and delete link, only visible to the superuser. In mobile view the blog image will take the full width and blog name and other details will come below the blog.
 
 **Blog Deatils Page:**
 
