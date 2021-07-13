@@ -579,4 +579,8 @@ footer {
         font-size: 80%;
         padding-top: 0px !important;
     }
+
+    .list-inline-item .nav-title {
+        font-size: .8rem;
+    }
 }
