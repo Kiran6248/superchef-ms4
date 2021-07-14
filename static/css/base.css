@@ -48,13 +48,13 @@ a.category-badge > span.badge:hover {
 .icon {
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
 }
@@ -521,6 +521,17 @@ footer {
         top: -150px;
     }
 
+    
+
+}
+
+@media (max-width: 1024px) {
+    .btn.btn-outline-black.rounded-0.btn-lg,
+    .btn.btn-black.rounded-0.btn-lg {
+        padding: .375rem .375rem;
+        font-size: .75rem;
+    }
+
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
@@ -636,6 +647,10 @@ footer {
     }
 
     .list-inline-item .nav-title {
-        font-size: .8rem;
+        font-size: .7rem;
+    }
+
+    .header-container {
+        padding-top: 90px;
     }
 }
