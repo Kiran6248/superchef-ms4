@@ -6,9 +6,9 @@
 
 ![image](docs/responsive.JPG)
 
-This is my fourth and final milestone project for Code institute’s full stack web developer diploma. This project is a **Django web application** made with the use of **HTML**, **CSS**, **JavaScript** and **Python** and utilizing a relational database.
-**Stripe** is also used for payment system.
-This project is plugged into a **PostgreSQL** database, with **SQlite3** used in development and was deployed using **Heroku**. **AWS S3 bucket** is used to store static and media files. The **Bootstrap** framework and grid system was used for styling across the site.
+This is my fourth and final milestone project for Code institute’s full-stack web developer diploma. This project is a **Django web application** made with the use of **HTML**, **CSS**, **JavaScript**, and **Python** and utilizing a relational database.
+**Stripe** is also used for payment systems.
+This project is plugged into a **PostgreSQL** database, with **SQlite3** used in the development and was deployed using **Heroku**. **AWS S3 bucket** is used to store static and media files. The **Bootstrap** framework and grid system were used for styling across the site.
 ***
 
 ## **Table of Content**
@@ -68,10 +68,10 @@ This project is plugged into a **PostgreSQL** database, with **SQlite3** used in
 ## **Overview**
 
 SuperChef is an online e-commerce store, which offers a collection of Kitchenware in many categories. 
-User’s can create their own account, saving their details for faster checkout for future purchases, but are not limited to that,
+Users can create their account, saving their details for faster checkout for future purchases, but are not limited to that,
 and can make a purchase as a guest if wanted.
-The registered user can edit their personal details and access their shopping history.
-Blogs are presented for good reads and site owner can be contacted easily.
+The registered user can edit their details and access their shopping history.
+Blogs are presented for good reads and site owners can be contacted easily.
 
 [Go Back to Top](#table-of-content)
 ***
@@ -80,9 +80,9 @@ Blogs are presented for good reads and site owner can be contacted easily.
 
 ### **User Goals**
 
-1.	Somewhere to search for few things which user want to have and do the purchasing in easy steps.
+1.	Somewhere to search for few things which users want to have and do the purchasing in easy steps.
 2.	In the current pandemic situation, Users may want to do purchasing from the safe environment of their home.
-3.	User-friendly website, where user don’t have to be very technically educated to do the purchasing.
+3.	User-friendly website, where users doesn’t have to be very technically educated to do the purchasing.
 
 ### **Business Goals**
 
@@ -90,7 +90,7 @@ Blogs are presented for good reads and site owner can be contacted easily.
 2.	A kitchenware website, where buyers can easily find the product according to their category.
 3.	To make the product’s view based on many sorting types. For example, price- low to high, high to low. Rating- low to high, high to low. Etc.
 4.	The Site owner will have full control over the products, He/She can add, edit and delete products.
-5.	Site will have Blogs related to kitchen and cooking, for the better involvement of the user.
+5.	The site will have Blogs related to kitchen and cooking, for the better involvement of the user.
 
 ### **User Stories**
 
@@ -149,35 +149,35 @@ As the Site owner I want/expect/need:
 ## **Planes of Development**
 ### **Strategy**
 
-The aim of making this site is to make a website that focuses mainly on kitchen products. 
-There are plenty of sites right now but very few focuses only in kitchen tools and accessories. We are going through a pandemic and lockdown situation worldwide. We are bound to stay inside our home and left with very few activities, in that cooking is a good hobby to pursue.
- As we know new cooks are very keen to try new utensils and accessories, so this site might be a good place for them to search the product of their choice.
+The aim of making this site is to make a website that focus mainly on kitchen products. 
+There are plenty of sites right now but very few focus only on kitchen tools and accessories. We are going through a pandemic and lockdown situation worldwide. We are bound to stay inside our home and left with very few activities, in that cooking is a good hobby to pursue.
+ As we know new cooks are very keen to try new utensils and accessories, so this site might be a good place for them to search for the product of their choice.
 
  ### **Scope**
 
- I want to make a website that is accessible to everyone. People can search and browse all the products without being registered, 
- so that their will be no hesitation in going through the site. Anyone can do the purchasing by adding his/her details and doing valid payment. 
+ I want to make a website that is accessible to everyone. People can search and browse all the products without being registered
+ so that there will be no hesitation in going through the site. Anyone can do the purchasing by adding his/her details and doing a valid payment. 
  
- The detail of every product opens in new page with product rating with it, so it is easier to decide which product to buy. 
+ The detail of every product opens on a new page with a product rating with it, so it is easier to decide which product to buy. 
  
- Products can be sorted in various ways like price- low to high or high to low, category, ratings etc. users can make their profile, so that when they return back, they will have their details already filled.
+ Products can be sorted in various ways like the price- low to high or high to low, category, ratings, etc. users can make their profile so that when they return, they will have their details already filled.
 Users can go through the blog page and write a comment if they want. And they can contact the site owner with the contact form provided.
 
 ### **Structure**
 
 This website will be a multi-page site, where pages are connected through Navigation Bar or Python. 
 The navigation bar will have links for the Home page, my account(login, register), bag, and Blog. The navigation links will change and show the logout and My profile Once the user is logged in. 
-It will show product management link for the superuser.The navigation bar will be collapsible for Mobile view . 
+It will show a product management link for the superuser. The navigation bar will be collapsible for Mobile view. 
 There will be a footer, which will show the contact details of the admin. It will be sticky and always remain at the end of the page. 2 forms will be there, one for Login and the other for Registration. 
-One contact form will also be there for the users to contact the admin. There will be pages for products, product details, shopping bag, checkout, checkout success, blog, blog details, Users will have a my profile page after the register with the site. Superuser will do the product management, he/she can add edit and delete any product. Superuser will post the blog which can be commented by any user .
-SQLite3 is used in development and PostgreSQL database is used in production mode. All the static and media file will be stored in AWS s3 bucket it will be deployed by using Heroku.
+One contact form will also be there for the users to contact the admin. There will be pages for products, product details, shopping bag, checkout, checkout success, blog, blog details, Users will have my profile page after they register with the site. Superuser will do the product management, he/she can add edit, and delete any product. Superuser will post the blog which can be commented on by any user.
+SQLite3 is used in the development and the PostgreSQL database is used in production mode. All the static and media files will be stored in the AWS s3 bucket it will be deployed by using Heroku.
 
 ### **Skeleton**
 #### **Wireframe**
 The wireframe for this project has been made for Three screen sizes(Mobile View, Tablet View, and Laptop View). Each page is shown in all three 
 screen sizes for a better understanding of the responsiveness of the page.
 
-The wireframes for this Project can be seen here.
+The wireframes for this project can be seen here.
 <details>
 <summary>Wireframe</summary>
 <br>
@@ -211,34 +211,34 @@ The wireframes for this Project can be seen here.
 </details>
 
 #### **Sitemap**
-Sitemap is prepared for this site to understand the navigation of the pages.
+A Sitemap is prepared for this site to understand the navigation of the pages.
 
-Sitemap can be seen here. [Sitemap](docs/wireframes/Sitemap.pdf)
+The Sitemap can be seen here. [Sitemap](docs/wireframes/Sitemap.pdf)
 
 ### **Surface**
 #### **Color**
 
-The color used for this project are kept very minimum, so that the strong tonal varitaion provides a good contrast. The main color used for the project is Mustard yellow(#E1AD01), which goes very well with the kitchen theme and it is a good contrast with the other two colors Black(#000000) and White(#ffffff).
+The colors used for this project are kept very minimum so that the strong tonal varitaions provides a good contrast. The main color used for the project is Mustard yellow(#E1AD01), which goes very well with the kitchen theme and it is a good contrast with the other two colors Black(#000000) and White(#ffffff).
 
 The colors used are:
 
 ![image](docs/Capture.JPG)
 
-Mustard Yellow color is used for delivery Banner and hover over across page. The Text color used are mainly black and changes to mustard yellow when hovered over.
-The placeholder text for the form have color Cadet Blue(#AAB7C4) and rating text of the product description is Bootstrap text-muted class Slate Gray(#6C757d)
+Mustard Yellow color is used for delivery Banner and hovers over across page. The Text color used are mainly black and changes to mustard yellow when hovered over.
+The placeholder text for the form have the color Cadet Blue(#AAB7C4) and the rating text of the product description is Bootstrap text-muted class Slate Gray(#6C757d)
 
 
 
 #### **Core**
 
-The Core of the project is kept Black and White. The navbar is White and Main nav is Black, which has text written in white that changes to mustard yellow when hovered over. 
+The Core of the project is kept, Black and White. The navbar is White and the Main nav is Black, which has text written in white that changes to mustard yellow when hovered over. 
 The Footer is Black with texts of white color. The social media links and Contact link changes to mustard yellow color when hovered over.
 The pages of the project are kept white to make a good contrast with the products images.
 
 #### **Buttons**
 
 The Buttons are kept black with text white, which changes to mustard yellow when hovered over.
-The edit and delete links have given a consistent coloue with the intuitative suggestions about their functions.
+The edit and delete links have given a consistent color with the intuitive suggestions about their functions.
 The edit is kept Dodger Blue(#007BFF) and Delete link is Amaranth(#DC3545)
 The back to top button is Mustard yellow(#E1AD01)
 
@@ -370,77 +370,77 @@ The structure of the Product and Checkout apps are guided by the Code Institute'
 **Navigation Bar:**
 
 All pages of the project have a fixed top navigation bar which has a search box, Site logo, and 3 icons, One is for *my Account* second is for *Blog* and another is *bag* icon.
-The search box can be use to search by keywords of the product name or description. The My account icon is a dropdown list, which shows login and register links for the first time users. If the user has registered and logged in then then it will show a link to *my profile* and *logout* page. If the user is a superuser/admin then links to *Product management* and *Blog Management* are also visible. The bag icon takes us to *shopping Bag* page after clicking on it and it also displays the total amount of the products already in the bag. This section is fully responsive and in the mobile view the search box is replaced by only the icon of the search and search box appears after clicking on it. 
-The navigation bar consiste of one **Main Nav** also, which is a list of all the categories of the products used in the project. These list have links based on price and rating of the product also. This section changes to a collapsible hamburger menu on the left side of the screen for the smaller screen view. 
+The search box can be used to search by keywords of the product name or description. The My account icon is a dropdown list, which shows login and register links for first-time users. If the user has registered and logged in then it will show a link to *my profile* and *logout* page. If the user is a superuser/admin then links to *Product management* and *Blog Management* are also visible. The bag icon takes us to the *shopping Bag* page after clicking on it and it also displays the total amount of the products already in the bag. This section is fully responsive and in the mobile view the search box is replaced by only the icon of the search and the search box appears after clicking on it. 
+The navigation bar consists of one **Main Nav** also, which is a list of all the categories of the products used in the project. These lists have links based on the price and rating of the product also. This section changes to a collapsible hamburger menu on the left side of the screen for the smaller screen view. 
 There is one delivery banner also which displays the message about the free delivery threshold for the project.
 
 **Footer:**
 
-The Footer is a *Sticky Footer* , which is visible in every page of the project. The footer has 3 sections, one is the copyright information about the site owner, second is the font awesome icons of the social media *Facebook*, *Twitter*, and *Instagram*. The links takes the user to the respective sites after clicking on it.
+The Footer is a *Sticky Footer*, which is visible on every page of the project. The footer has 3 sections, one is the copyright information about the site owner, second is the font awesome icons of the social media *Facebook*, *Twitter*, and *Instagram*. The links take the user to the respective sites after clicking on them.
 The third section is a *Contact Us* link, which opens the contact form after clicking.
 
 **Index page:**
 
-The Index page or landing Page is divided in 3 sections. First section has a Carousal with 3 images. Each image has a cover text which has some information and a button to take the user to the relative page.
-Second section has 2 cards, one is a image of a blog and a button to take the user to the **Blog** page and second is an iamge of kitchen and a button to go to The main Product page.
-Last section has a **Special Offer** section which displays the iamges of special offer category products and a *See All* link to take the user to the special offer section. The product images are also clickable and takes the user to the product description page.
+The Index page or landing page is divided into 3 sections. The first section has a Carousal with 3 images. Each image has a cover text which has some information and a button to take the user to the relative page.
+The second section has 2 cards, one is an image of a blog and a button to take the user to the **Blog** page and the second is an image of the kitchen and a button to go to The main Product page.
+The last section has a **Special Offer** section which displays the images of special offer category products and a *See All* link to take the user to the special offer section. The product images are also clickable and take the user to the product description page.
 
 **Products page:**
 
-Products can be viewed in many different ways. The product is displayed in the form of a card, which has *product image*, *product price*, *product category*(which is also a clickable badge to take the user to that category), *product rating* and *edit and delete* button. 
-Product Image takes the user to Product detail page when clicked. Edit and delete button are only visible to the superuser.
-This page also has a sort button which displays the products in that specific sort order (Price(low to high), Price(high to low), Rating(low to high), Rating(high to low), Name(A-Z), Name(Z-A), Category(A-Z) and Category(Z-A)).
+Products can be viewed in many different ways. The product is displayed in the form of a card, which has a *product image*, *product price*, *product category*(which is also a clickable badge to take the user to that category), *product rating*, and *edit and delete* button. 
+Product Image takes the user to the Product detail page when clicked. The  edit and delete button are only visible to the superuser.
+This page also has a sort button that displays the products in that specific sort order (Price(low to high), Price(high to low), Rating(low to high), Rating(high to low), Name(A-Z), Name(Z-A), Category(A-Z) and Category(Z-A)).
 
 **Product Detail page:**
 
-Product Detail page has Image of the product on left side, which is clickable and opens the product image in a new tab. Left side of the page has *product name*, *product price*, *product rating*, *category*, *edit /delete* button(for superuser), *product description*, *quantity selector*, and 2 buttons, one for *keep shopping* and another for *Add to bag*.
+The Product Detail page has an image of the product on the left side, which is clickable and opens the product image in a new tab. The left side of the page has *product name*, *product price*, *product rating*, *category*, *edit /delete* button(for superuser), *product description*, *quantity selector*, and 2 buttons, one for *keep shopping* and another for *Add to bag*.
 
 **Product Management Page:**
 
-Product management page opens after clicking the product management link in the my profile dropdown in navbar. this link is only visible to the admin. This page can be used to add or edit new products. The add products page opens with a form to select the category in the dropdown menu, Place to write 'sku', 'name', 'description' 'price', 'rating', 'image url' and a button to select the image. Two buttons are given, one to cancel the action and another to add the product. When the admin selects the edit action the page will open with advance populated with the product information and detail. Product image is also visible to take better decision. This image section is made with django widgets for better user experience. Two buttons are given to edit or cancel the action. After adding or editing the product, product detail page opens. 
+The Product management page opens after clicking the product management link in my profile dropdown in the navbar. this link is only visible to the admin. This page can be used to add or edit new products. The add products page opens with a form to select the category in the dropdown menu, Place to write 'sku', 'name', 'description' 'price', 'rating', 'image URL', and a button to select the image. Two buttons are given, one to cancel the action and another to add the product. When the admin selects the edit action the page will open with advance populated with the product information and detail. Product image is also visible to take a better decision. This image section is made with Django widgets for a better user experience. Two buttons are given to edit or cancel the action. After adding or editing the product, the product detail page opens. 
 
 **Profile page:**
 
-The profile page can be accessed by the **My account** link in the navbar. This page is divided in 2 sections. One is having a information form, which is empty in the beginning and get filled automatically after user enters its information in checkout page. There is an *Update Information* button in the end, for the user to change any detail if he wants. 
-The second section is *Order History* list, which displays the orders placed by The user. It shows *Order Number*, *date*, *Item name* and *Order Total*.
+The profile page can be accessed by the **My Account** link in the navbar. This page is divided into 2 sections. One is having an information form, which is empty in the beginning and gets filled automatically after the user enters its information on the checkout page. There is an *Update Information* button in the end, for the user to change any detail if he wants. 
+The second section is the *Order History* list, which displays the orders placed by The user. It shows *Order Number*, *Date*, *Item Name*, and *Order Total*.
 The Order Number shows only 5 digits in the form but when clicked it opens the page of **order history**.
 
 **Order history:**
 
-This page can be accessed by the profile page and clicking on the order number. The order history page shows *order info* (order number and order details), *order details* (item name and price), *Delivering To* (Full name, Address1, Address2, County, Town or city, Postal Code, Country Phone Number), *Billing Info* (order total, delivery and Grand Total). There is a *Back to Profile* button at the end whish takes back to the profile page.
+This page can be accessed by the profile page and by clicking on the order number. The order history page shows *order info* (order number and order details), *order details* (item name and price), *Delivering To* (Full name, Address1, Address2, County, Town or city, Postal Code, Country Phone Number), *Billing Info* (order total, delivery and Grand Total). There is a *Back to Profile* button at the end which takes back to the profile page.
 
 **Shopping Page:**
 
-The shopping page can be viewed by clicking the bag icon on the navbar. The shopping page shows the details of the products added by the user in his/her bag. It shows *product info* (product image, product name and sku), *Price*, *Quantity selector box* , and *Subtotal*. There are 2 buttons given below the quantity selector, one is *update* button, to increase or decrease the quantity of the product and another is *remove* button, to remove the item from the bag.
-This page shows *Bag total*, *Delivery cost* and *Grand Total* also. If the discount threshold is not reached then one message will show about how much to spend more to reach that threshold. There are 2 buttons given in the bottom, one for keep shopping and another for secure checkout.
+The shopping page can be viewed by clicking the bag icon on the navbar. The shopping page shows the details of the products added by the user in his/her bag. It shows *product info* (product image, product name, and sku), *Price*, *Quantity selector box*, and *Subtotal*. There are 2 buttons given below the quantity selector, one is the *update* button, to increase or decrease the quantity of the product and another is the *remove* button, to remove the item from the bag.
+This page shows *Bag total*, *Delivery cost*, and *Grand Total* also. If the discount threshold is not reached then one message will show about how much to spend more to reach that threshold. There are 2 buttons given at the bottom, one for keep shopping and another for secure checkout.
 
-Thia page looks different in mobile view, where *Bag total*, *Delivery cost* and *Grand Total* are at the top of the page. And one *back to top* button is also added in case user has multiple products and page becomes very long. 
+This page looks different in mobile view, where *Bag total*, *Delivery cost*, and *Grand Total* are at the top of the page. And one *back to top* button is also added in case the user has multiple products and the page becomes very long. 
 
 **Checkout Page:**
 
-The checkout page can be viewed by clicking secure checkout button on the shopping bag page. The checkout page is divided in two sections horizontally. First one is having the details of the customer 'full name', 'email address', 'phone number', 'address', 'county', 'postal code', and a dropdown selection for the country. One more box is given to enter the card number. If the user is not logged in then one information will display to tell the user to login to save this information and if the user is not registered then he/she can use create account link to register. two buttons are given at the bottom, one to *adjust bag* and another to *complete order*.
-Below the buttons the total purchase amount is shown in red color.
-The second section of the checkout page shows the *order summary* of the order placed by the user. It displays product image, product name, sub total, delivery, grand total.
+The checkout page can be viewed by clicking the secure checkout button on the shopping bag page. The checkout page is divided into two sections horizontally. First one is having the details of the customer 'full name', 'email address', 'phone number', 'address', 'county', 'postal code', and a dropdown selection for the country. One more box is given to enter the card number. If the user is not logged in then one information will display to tell the user to log in to save this information and if the user is not registered then he/she can use create account link to register. two buttons are given at the bottom, one to *adjust bag* and another to *complete order*.
+Below the buttons, the total purchase amount is shown in red color.
+The second section of the checkout page shows the *order summary* of the order placed by the user. It displays product image, product name, subtotal, delivery, grand total.
 
 **Checkout Success Page:**
 
-This page can be viewed by clicking *Complete Order* button on the checkout page, This page is same as *order history* page. 
+This page can be viewed by clicking the *Complete Order* button on the checkout page, This page is the same as the *order history* page. 
 
 **Blog Page:**
 
-Blog is created to view by every user. It can be accessed by any user by clicking the blog link on home page or blog icon in top nav. The blog page shows rows of all the blogs. Every row have one blog image, Name of the blog, Name of the person who added the blog, Date and time of blog added, And first 150 characters of the blog details. There is a *read more* button the open the blog in the different page for a full view. The image of the blog will also open the blog in the detail view. There is one edit and delete link, only visible to the superuser. In mobile view the blog image will take the full width and blog name and other details will come below the blog.
+The blog is created to view by every user. It can be accessed by any user by clicking the blog link on the home page or blog icon in the top nav. The blog page shows rows of all the blogs. Every row has one blog image, Name of the blog, Name of the person who added the blog, Date and time of blog added, And first 150 characters of the blog details. There is a *read more* button the open the blog on the different page for a full view. The image of the blog will also open the blog in the detail view. There is one edit and delete link, only visible to the superuser. In mobile view, the blog image will take the full width and the blog name and other details will come below the blog.
 
 **Blog Deatils Page:**
 
-Blog details page can be opened by clicking the blog name or image or read more button on blog page. This page contains a big blog image and full blog detail. There is a back to blog button given at the end of the blog detail, which takes back to main blog page.
+The blog details page can be opened by clicking the blog name or image or read more button on the blog page. This page contains a big blog image and full blog detail. There is a **back to blog** button given at the end of the blog detail, which takes back to the main blog page.
 
 **Blog Comments section:**
 
-One comment section is added at the blog detail page after the back to blog button. In this comment section, anybody can Enter their name and email id and Add their comments and submit through ta submit button. The comments needs approval by the Admin. This feature is added for the safety reasons to avoid any spam or unacceptable comments. After the approval the comment is visible with the person's name, date and time of the comment.
+One comment section is added to the blog detail page after the back to blog button. In this comment section, anybody can Enter their name and email id and Add their comments and submit through ta submit button. The comments need approval by the Admin. This feature is added for safety reasons to avoid any spam or unacceptable comments. After the approval, the comment is visible with the person's name, date, and time of the comment.
 
 **Blog Management Page:**
 
-The blog management page is visible only to the admin byt clicking the blog management link in my profile dropdown in the navbar. The blog management page is made to add new blogs or edit existing blogs easily and without opening the django admin page. This page has 'Blog name', 'Slug', 'Author', 'body', button to select the image or a space to add the image url. Status can be selected between *draft* or *publish*. Two buttons are given, one to cancel the action and another to add the blog. after adding blog detail page opens. When the admin select the edit action for the blog, the page opens with populated with the blog information in advance. Blog image is also visible. The blog image section is made using widgets of django which gives a very good user experience. The admin will have an option to cancel the action or update the blog.
+The blog management page is visible only to the admin by clicking the blog management link in my profile dropdown in the navbar. The blog management page is made to add new blogs or edit existing blogs easily and without opening the Django admin page. This page has 'Blog name', 'Slug', 'Author', 'body', a button to select the image, or a space to add the image URL. Status can be selected between *draft* or *publish*. Two buttons are given, one to cancel the action and another to add the blog. after adding blog detail page opens. When the admin selects the edit action for the blog, the page opens with populated with the blog information in advance. The blog image is also visible. The blog image section is made using the widgets of Django which gives a very good user experience. The admin will have an option to cancel the action or update the blog.
 
 **Back to top button:**
 
@@ -448,28 +448,32 @@ A back to top button is visible on product and bag pages when the user scrolls p
 
 **Contact Page:**
 
-The contact page can be opened by clicking th contact us link on the footer. This page has a feedback form for the user to enter 'name', 'email', 'subject' and the 'message'. One button is given to send the message. The message directly goes to admin's email account.
+The contact page can be opened by clicking the contact us link on the footer. This page has a feedback form for the user to enter 'name', 'email', 'subject', and the 'message'. One button is given to send the message. The message directly goes to the admin's email account.
 
 **Toasts:**
 
-All pages displays toast messages depending on the action taken. Toast messages are of 4 types, 'success', 'error', 'warning', and 'info'. The toast colour also changes according to the message. Toast is displayed at the top right of the page below the navbar. There is a button is the toast to go to secure checkout.
+All pages display toast messages depending on the action taken. Toast messages are of 4 types, 'success', 'error', 'warning', and 'info'. The toast color also changes according to the message. Toast is displayed at the top right of the page below the navbar. There is a button is the toast to go to the secure checkout.
 
 **Delete Modal:**
 
-The delete modal is added as the safety of the site. The admin can delete the products and blogs but while doing that one delete modal pops up asking for the confirmation about the action. If the admin is sure to delte then he/she clicks the delete button or if not sute then click cancel and go back to open page.
+The delete modal is added for the safety of the site. The admin can delete the products and blogs but while doing that one delete modal pops up asking for confirmation about the action. If the admin is sure to delete then he/she clicks the delete button or if not sure then click cancel and go back to the open page.
 
 
-### **Features to be implementd in Future**
+### **Features to be implemented in Future**
 
-There are pleant of features that can be added in the project in the future as django gives multiple opportunities and options. 
+There are plenty of features that can be added to the project in the future as Django gives multiple opportunities and options. 
 
 1. Account login via social media
  
- I wanted to add Gmail or facebook login in the project but due to some factors I could not do that. I would love to do that in the future after getting more knowledge in Django.
+ I wanted to add Gmail or Facebook login in the project but due to some factors, I could not do that. I would love to do that in the future after getting more knowledge in Django.
 
 2. Product Review
 
- It would be great if the user get to know what other people think about a particular product. I would love to do that in the future.
+ It would be great if the user gets to know what other people think about a particular product. I would love to do that in the future.
+
+3. Comments section with user profile
+
+ When the registered user wants to add comments on the blog, it should show the name and email id prefilled in the form. This can be implemented in the future.
 
 [Go back to Top](#table-of-content)
 ***
@@ -524,6 +528,7 @@ There are pleant of features that can be added in the project in the future as d
  * [Snipping Tool](https://en.wikipedia.org/wiki/Snipping_Tool) was used to take screenshots of the images and codes.
  * [TinyPNG](https://tinypng.com/) is used to reduce the size of the Hero Image.
  * [Balsamiq](https://balsamiq.com/wireframes/) is used to make wireframes for this project in the skeleton stage.
+ * [Grammarly](https://app.grammarly.com/) is to check spelling errors of the README.md and TESTING.md.
 
 
 [Go back to Top](#table-of-content)
@@ -533,15 +538,15 @@ There are pleant of features that can be added in the project in the future as d
 
 ### **Project barriers and solutions**
 
-* While making the index.html page for Home app, I tried to show background images by adding them in media folder, but it was not working. It was working fine when i tried to add the images from static folder. I checked every spelling error in settings.py and project level urls.py file, but I could not find any mistake. I searched in [Django documentation](https://docs.djangoproject.com/en/3.2/) also to check if the code is correct. I found that the code is correct. So, I searched in slack for some related issues and I found one suggestion from a member to add one code in settings.py's context_processor. I tried that code and images started loading perfectly. the code used was 
+* While making the index.html page for the Home app, I tried to show background images by adding them to media folder, but it was not working. It was working fine when I tried to add the images from the static folder. I checked every spelling error in the settings.py and project level urls.py file, but I could not find any mistake. I searched in [Django documentation](https://docs.djangoproject.com/en/3.2/) also to check if the code is correct. I found that the code is correct. So, I searched in slack for some related issues and I found one suggestion from a member to add one code in settings.py's context_processor. I tried that code and the images started loading perfectly. the code used was 
         
         'django.template.context_processors.media',
 
-* Blog and comments on blog are the 2 extra models which were decided by me to add in the project. Adding Blog , Editing it and Deleting dunctions worked fine but when I added comment model and wrote view for it, the blog detail section started giving error, those errors were unfamiliar to me. So, i contacted Tutor support but could not get any help from there. So I started going line by line and trying to understand it and I found that my comment variable in database has no connection with the blog variable in the view. So, I made the correction and after few trial the view started working. The line which was written wrong and then corrected was 
+* Blog and comments on the blog are the 2 extra models which were decided by me to add to the project. Adding Blog, Editing it, and Deleting functions worked fine but when I added the comment model and wrote view for it, the blog detail section started giving errors, those errors were unfamiliar to me. So, I contacted Tutor support but could not get any help from there. So I started going line by line and trying to understand it and I found that my comment variable in the database has no connection with the blog variable in the view. So, I corrected and after a few trial the view started working. The line which was written wrong and then corrected was 
 
          'new_comment.post = blog'
 
-* The biggest project barrier came on the day of deployment, On 1st july 2021 Gitpod had some incident which dleted all uncommited files from every workspace open during that time. My workspace was open as I was going to do deployment. The workspace stopped working and We got instructions from Gitpod.
+* The biggest project barrier came on the day of deployment, On 1st July 2021, Gitpod had some incident that deleted all uncommitted files from every workspace open during that time. My workspace was open as I was going to do the deployment. The workspace stopped working and We got instructions from Gitpod.
 
   <details>
   <summary>Gitpod Instruction</summary>
@@ -577,6 +582,8 @@ So I install the requirements again by this command:
 
 ### **Known Issues**
 
+* While testing the payment functionality and after entering the card details, It was found that it is validating only card number and date. In the place of CVC or ZIP if I entered 000 then also it was showing the checkout success. This can be considered as a bug and corrected in the future.
+
 [Go back to Top](#table-of-content)
 ***
 
@@ -593,13 +600,13 @@ This E-Commerce project was developed in Gitpod and pushed to a remote repositor
 
 ### **Local Deployment**
 
-This project can be cloned or downloaded from Github by following these steps. First decide which IDE you want to use and then install these:
+This project can be cloned or downloaded from Github by following these steps. First, decide which IDE you want to use and then install these:
 
  * Git - For version control
  * PIP - to install packages
- * Python - the programming language used in backend.
+ * Python - the programming language used in the backend.
 
-These are many ways to clone a repository sugggested by Github. Download the entire repo as a zip file, and then upload that zip into a new workspace. Otherwise, on the repository page in Github, follow these steps:
+These are many ways to clone a repository suggested by Github. Download the entire repo as a zip file, and then upload that zip into a new workspace. Otherwise, on the repository page in Github, follow these steps:
 
  1. Click the 'Code' button.
 
@@ -611,7 +618,7 @@ These are many ways to clone a repository sugggested by Github. Download the ent
 
         git clone <copied-repository-url-from-Step-2-^^>
 
-5. Create the environment variables, This can be created either in the Gitpod Settings by going to the Gitpod dashboard, go to Settings=> variables => and add the variables, or create a env.py and add the env.py in the .gitignore file in your projects root directory. These are the variables that should be included :
+5. Create the environment variables, This can be created either in the Gitpod Settings by going to the Gitpod dashboard, go to Settings=> variables => and add the variables, or create an env.py and add the env.py in the .gitignore file in your projects root directory. These are the variables that should be included :
 
         DEVELOPMENT = True
         SECRET_KEY = YOUR_SECRET_KEY
@@ -619,19 +626,19 @@ These are many ways to clone a repository sugggested by Github. Download the ent
         STRIPE_SECRET_KEY = YOUR_STRIPE_SECRET_KEY
         STRIPE_WH_SECRET = YOUR_STRIPE_WH_SECRET
 
- Sign up to Stripe to get the PUBLIC ans SECRET keys. This can be done by going on the Stripe, then on the left column of the page, click 'Developers'. and get API keys. Once you have set up the webhook endpoints, you will be given a unique STRIPE_WH_SECRET key.
+ Sign up to Stripe to get the PUBLIC and SECRET keys. This can be done by going on the Stripe, then on the left column of the page, click 'Developers'. and get API keys. Once you have set up the webhook endpoints, you will be given a unique STRIPE_WH_SECRET key.
 
  more information on this can be found [here](https://stripe.com/docs)
 
-6. Install the required dependencies for the app to run, type this in command line:
+6. Install the required dependencies for the app to run, type this in the command line:
 
         pip3 install -r requirements.txt
 
-7. The project will now be set up and to make it run in the type this in comand line:
+7. The project will now be set up and to make it run in the type this in the command line:
 
         python3 manage.py runserver
 
- To create superuser to access the admin backend:
+ To create a superuser to access the admin backend:
 
         python3 manage.py creatsuperuser
 
@@ -639,9 +646,9 @@ These are many ways to clone a repository sugggested by Github. Download the ent
 
         https://<superchef-url>/admin
 
-This will allow to add, edit and delete products, categories, users, orders and verify any email addresses and comments on blogs.
+This will allow you to add, edit, and delete products, categories, users, orders and verify any email addresses and comments on blogs.
 
-8. Models will need to be migrated in order to create them in the database. In the command line, type:
+8. Models will need to be migrated to create them in the database. In the command line, type:
 
         python3 manage.py makemigrations --dry-run
 
@@ -653,24 +660,24 @@ This will allow to add, edit and delete products, categories, users, orders and 
 
         python3 manage.py migrate
 
-Whenever a model is edited it will need to be migrated. to make sure we are migrating the correct modls, we run a dry run flag before makemigrations and to make sure which models to be migrated, we run plan flag with migrate beforehand.
+Whenever a model is edited it will need to be migrated. to make sure we are migrating the correct models, we run a dry run flag before makemigrations, and to make sure which models to be migrated, we run a plan flag with migrate beforehand.
 
 ### **Deployment to Heroku**
 
 Deploying this site to Heroku-
 
-1. Sign up or Login to Heroku app. After signing in, click 'New'. found at the top right of the dashboard, an then 'Create new app'.
+1. Sign up or Log in to the Heroku app. After signing in, click 'New'. found at the top right of the dashboard, and then 'Create new app'.
 
-2. Give a app a unique name ans set the region colsest to your location, then click 'Create app'.
+2. Give an app a unique name and set the region closest to your location, then click 'Create app'.
 
-3. Once created, click on the 'Resource' tab and in the add ons search bar, type postgres, and click 'Heroku Postgres' and then use the free plan. and confirm. This will provide a new Postgres database.
+3. Once created, click on the 'Resource' tab, and in the add ons search bar, type Postgres, and click 'Heroku Postgres' and then use the free plan. and confirm. This will provide a new Postgres database.
 
-4. There are spme extra dependencies and files that needed to be installed:
+4. There are some extra dependencies and files that needed to be installed:
 
-  * psycopg2-binary - a PostgresSQL database adapter for the python programming language.
-  * dj_database_url - a Django utility which allows you to utilise 12factor inspired DATABASE_URL environment variables to configure the Django application.
+  * psycopg2-binary - a PostgresSQL database adapter for the Python programming language.
+  * dj_database_url - a Django utility that allows you to utilize 12factor inspired DATABASE_URL environment variables to configure the Django application.
 
-We also need to install *gunicorn* - a Python Web Server Gateway Interface(WSGI) HTTP sever, which will act as tge web server.
+We also need to install *gunicorn* - a Python Web Server Gateway Interface(WSGI) HTTP server, which will act as the webserver.
 
 5. After installing the dependencies, run the command:
 
@@ -678,15 +685,15 @@ We also need to install *gunicorn* - a Python Web Server Gateway Interface(WSGI)
 
  This will ensure that Heroku installs all our apps requirements when we deploy.
 
-6. Postgres is used for deployment and to transfer the files, we have to re-createa database maually. To do this we have to follow these steps:
+6. Postgres is used for deployment and to transfer the files, we have to re-create the database manually. To do this we have to follow these steps:
 
- * Make sure you are connected to your mysql database.
+ * Make sure you are connected to your MySQL database.
 
  * Backup your current database and load it into a db.json file by typing in the command line:
 
         python3 manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.json
 
-7. Now to set up the new database, Go tot the project's 'settings.py' and import dj_database_url at the top.
+7. Now to set up the new database, Go to the project's 'settings.py' and import dj_database_url at the top.
 
 8. Scroll down to database setting and comment out the default configuration, replacing it with a call to dj_database_url.parse and give it the database URL from Heroku:
 
@@ -698,19 +705,19 @@ This can be found from the settings tab on Heroku, by clicking 'Reveal config va
 
         heroku config
 
-Note: This is a temporary set up and should not be pushed to the Github for security reasons.
+Note: This is a temporary setup and should not be pushed to Github for security reasons.
 
-Now your manage.py is connected to the nre postgres database. We have to run the migrations again as this is a new databse.
+Now your manage.py is connected to the new Postgres database. We have to run the migrations again as this is a new database.
 
 9. After this, load your product data from the db.json file into Postgres using:
 
         python3 manage.py loaddata db.json
 
-10. Next, we have to create a superuser to use on the postgres database:
+10. Next, we have to create a superuser to use on the Postgres database:
 
         python3 manage.py createsuperuser
 
-11. In 'settings.py' we have to create an if statement so when the Heroku app is running, you connect to the Postgres database. otherwise you connect to the development database. Replace the database setting with this code:
+11. In 'settings.py' we have to create an if statement so when the Heroku app is running, you connect to the Postgres database. Otherwise, you connect to the development database. Replace the database setting with this code:
 
         if 'DATABASE_URL' in os.environ:
             DATABASES = {
@@ -732,7 +739,7 @@ Now your manage.py is connected to the nre postgres database. We have to run the
 
         heroku login -i
 
-14. Disable collectstatic sp heroku won't try to collect static files when we deploy. If you have more than on app then dont forget --app flag in the command:
+14. Disable collectstatic in the Heroku won't try to collect static files when we deploy. If you have more than on app then don't forget --app flag in the command:
 
         heroku config:set DISABLE_COLLECTSTATIC=1 --app superchef-ms4
 
@@ -741,15 +748,15 @@ Now your manage.py is connected to the nre postgres database. We have to run the
 Heroku can be connected to Github to automatically deploy each time you issue a git push in the command line. The easiest way to enable this is :
 
  1. Open Heroku and navigate to the 'deploy' tab. 
- 2. Under 'Deployment Method' select 'Connect to github'.
- 3. Search for your repository anme and collect connect.
+ 2. Under 'Deployment Method' select 'Connect to Github'.
+ 3. Search for your repository name and collect connect.
  4. Then scroll down and click 'Enable Automatic Deploys'.
 
  The code will now be automatically deployed with every git push. Upon a git push, you will see the build in progress in the 'Activity' tab on Heroku. You are now deployed to Heroku.
 
 ### **Hosting Images on Amazon Web Service S3**
 
-The static and media files are hosted in as AWS S3 bucket for this project. We need to create an account with AWS, create a S3 bucket, giving it public access. The CORS configurations was provided by Code Institute, which is:
+The static and media files are hosted in an AWS S3 bucket for this project. We need to create an account with AWS, create an S3 bucket, giving it public access. The CORS configurations were provided by Code Institute, which is:
 
         [
           {
@@ -766,7 +773,7 @@ The static and media files are hosted in as AWS S3 bucket for this project. We n
           }
         ]
 
-The detail set up of S3 bucket can be found [here](https://docs.aws.amazon.com/s3/index.html)
+The detailed set up of the S3 bucket can be found [here](https://docs.aws.amazon.com/s3/index.html)
 
 We need to set the static and media files in our workspace. For this, we need to do the following:
 
@@ -808,11 +815,11 @@ We need to set the static and media files in our workspace. For this, we need to
             STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
             MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
-After setting up the s3 bucket, We get a csv file downloaded. In this file we will find AWS access key and secret access key.
+After setting up the s3 bucket, We get a csv file downloaded. In this file, we will find the AWS access key and secret access key.
 
 3. Add these keys to Heroku config variables.
 
-4. Add a variable here with the key of 'USE_AWS' with a value of 'True'. This ensures that settings file knows to use the AWS configuration when deploying to Heroku.
+4. Add a variable here with the key of 'USE_AWS' with a value of 'True'. This ensures that the settings file knows to use the AWS configuration when deploying to Heroku.
 
 5. Delete the DISABLE_COLLECSTATIC variables from Heroku, so Django can collect static files automatically uploading them to the S3 bucket.
 
@@ -829,7 +836,7 @@ After setting up the s3 bucket, We get a csv file downloaded. In this file we wi
         class MediaStorage(S3Boto3Storage):
             location = settings.MEDIAFILES_LOCATION
 
-7. Add and commit all these changes then issue a git push. This will trigger an automatic deployment to Heroku, and then all of this logic will be implemented, and static and meida files will be applied to the deployes site.
+7. Add and commit all these changes then issue a git push. This will trigger an automatic deployment to Heroku, and then all of this logic will be implemented, and static and media files will be applied to the deployed site.
 
 [Go back to Top](#table-of-content)
 ***
@@ -840,15 +847,15 @@ After setting up the s3 bucket, We get a csv file downloaded. In this file we wi
 
  1. [Bootstrap](https://getbootstrap.com/) is used for the project layout and to make the site responsive and codes for Navbar, Delete Modal are referred from there.
 
- 2. **Boutique Ado** project from Code institute was referred through out the project for the project setup and making use of allauth template logic. 
+ 2. **Boutique Ado** project from Code institute was referred throughout the project for the project setup and making use of allauth template logic. 
 
- 3. My own Two models for the **Blog** app, *blogpost* and *comments* are referred from Django Central's [Building a blog application](https://djangocentral.com/building-a-blog-application-with-django/) and [Creating Comments system with Django](https://djangocentral.com/creating-comments-system-with-django/)
+ 3. My own Two models for the **Blog** app, *blogpost*, and *comments* are referred from Django Central's [Building a blog application](https://djangocentral.com/building-a-blog-application-with-django/) and [Creating Comments system with Django](https://djangocentral.com/creating-comments-system-with-django/)
 
- 4. Youtube channel [Code with Harry](https://www.youtube.com/watch?v=5BDgKJFZMl8&list=PLu0W_9lII9ah7DDtYtflgwMwpT3xmjXY9) for better understanging of Django.
+ 4. Youtube channel [Code with Harry](https://www.youtube.com/watch?v=5BDgKJFZMl8&list=PLu0W_9lII9ah7DDtYtflgwMwpT3xmjXY9) for a better understanding of Django.
 
 ### **Media**
 
- 1. [Google Images](https://www.google.com/) is used to get product images and [Amazon.uk](https://www.amazon.co.uk/) is used to refer product descriptions.
+ 1. [Google Images](https://www.google.com/) is used to get product images and [Amazon.uk](https://www.amazon.co.uk/) is used to refer the product descriptions.
 
  2. [Unsplash](https://unsplash.com/) is used to get images on the Home page.
 
@@ -856,11 +863,11 @@ After setting up the s3 bucket, We get a csv file downloaded. In this file we wi
 
  1. My mentor **Can Sucullu** for his guidance and advice.
 
- 2. Code Institute **Slack Community** of solving every small issues.
+ 2. Code Institute **Slack Community** of solving every small issue.
 
- 3. Code Institute's Tutors **John** and **Alan** of their support and guidance when I lost my workspace and database during Gitpod Incident on 1st July 2021.
+ 3. Code Institute's Tutors **John** and **Alan** of their support and guidance when I lost my workspace and database during the Gitpod Incident on 1st July 2021.
 
- 4. My Family for supporting and understanging me in this long project.
+ 4. My Family for supporting and understanding me in this long project.
 
  5. My friend from Code Institute [Mihaela Sandrea](https://github.com/mihaelasandrea) for support and helping me in debugging, whenever I got an issue.
 
