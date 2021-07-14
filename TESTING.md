@@ -100,7 +100,25 @@ These warnings can be overlooked.
 
  The result can be seen here.
 
- ![python]()
+ ![python](docs/peptest.JPG)
+
+ Further testing was done by typing this code in command line
+
+     python3 -m flake8
+
+And the result found was this
+
+![image](docs/pytest.JPG)
+
+The reults showing mostly pylint errors. To remove this error It was suggested from Stack Overflow to make a settings.json file in .vscode and add a code 
+
+      "python.linting.pylintArgs": [
+        "--load-plugins=pylint_django",
+        "--load-plugins=pylint_django.checkers.migrations",
+        "--django-settings-module=<YOUR_DJANGO_PROJECT>.settings",
+    ]
+
+I asked One tutor for the further confirmation and it was suggested that I should not make changes in .vscode and this errors can be ignored.
 
 [Go to Top](#testing)
 ***
@@ -526,6 +544,10 @@ Testing User stories from UX part of [README.md](README.md)
 ***
 
 ## **Lighthouse**
+
+Lighthouse testing was done in Chrome Devtools and the result found was this.
+
+![image](docs/lighthouse.JPG)
 
 [Go to Top](#testing)
 ***
